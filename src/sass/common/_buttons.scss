@@ -1,0 +1,11 @@
+.button {
+  display: block;
+  min-width: 260px;
+  margin: 0 auto;
+  padding: 0 14px;
+  background-color: $bg-btn-color;
+  @include font-style(12px, 800, 1.12, 0.08em, $white-text-color);
+}
+
+.button--reversed {
+}

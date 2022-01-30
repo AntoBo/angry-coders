@@ -4,7 +4,9 @@
 @import './utils/mixins';
 
 // Общие стили
+@import './common/base';
 @import './common/commons';
+@import './common/buttons';
 
 // Компоненты проекта
 @import './components/header';
