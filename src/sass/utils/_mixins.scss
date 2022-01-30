@@ -1,8 +1,16 @@
+//этот миксин нужен для сокращения описания свойств сетки.
+//добавялем его в класс item (<li>), из которых состоит сетка
+//можно написать этот миксин для каждого медиа правила, то есть внутри миксина mq
 //use @include grid(15px, 2);
 @mixin grid($margins, $columns) {
   margin: $margins;
   flex-basis: calc((100% - 2 * #{$columns} * #{$margins}) / #{$columns});
 }
+
+//этот миксин нужен для сокращения описания медиа-правил.
+//use @include mq(tablet){
+//сюда пишем контент;
+//};
 
 @mixin mq($range) {
   $mobile: 480px;
@@ -44,14 +52,10 @@
   }
 }
 
+//этот миксин нужен для сокращения повторяющихся списков свойств шрифтов.
+//добавялем его в класс, в котором нужно описать свойства шрифта
 //use @include font-style(26px, 900, 1.61, null, $color-white);
-@mixin font-style(
-  $size: false,
-  $weight: false,
-  $lh: false,
-  $ls: false,
-  $colour: false
-) {
+@mixin font-style($size: false, $weight: false, $lh: false, $ls: false, $colour: false) {
   @if $size {
     font-size: $size;
   }
@@ -67,4 +71,18 @@
   @if $colour {
     color: $colour;
   }
+}
+
+//этот миксин нужен для сокращения повторяющихся списков свойств для анимации.
+//добавялем его в тело класса, который должен красиво анимироваться
+//в том же классе нужно не забыть перед этим миксином вызвать свойство, которое будем анимировать позже в миксине
+//например   fill: red;
+
+//use @include animate(fill, 250ms);
+//use @include animate(fill); - так тоже можно
+@mixin animate($property, $duration: 250ms) {
+  transition-property: $property;
+  transition-duration: $duration;
+
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
