@@ -23,6 +23,7 @@
   }
   @include mq(desktop) {
     max-width: 495px;
+    margin-right: 115px;
   }
 }
 .section__title--hero {
