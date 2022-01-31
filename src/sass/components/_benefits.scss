@@ -1,0 +1,21 @@
+.section--benefits {
+  background-color: $black-bg-color;
+  background-image: linear-gradient(to bottom, $black-bg-color 67%, $white-bg-color 67%);
+}
+
+.section__title--benefits {
+  width: 180px;
+  margin-bottom: 30px;
+  color: $white-text-color;
+  text-align: left;
+}
+
+.benefits__list {
+  padding: 53px 14px 20px 30px;
+  background-color: $white-bg-color;
+  box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+}
+
+.benefits__item:not(:last-child) {
+  padding-bottom: 69px;
+}
