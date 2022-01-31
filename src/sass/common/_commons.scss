@@ -20,6 +20,6 @@ body {
   text-align: center;
 }
 
-.item-title {
+.item__title {
   @include font-style(14px, 800, 1.43, 0.08em, $black-text-color);
 }
