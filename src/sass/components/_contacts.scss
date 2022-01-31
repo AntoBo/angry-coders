@@ -1,11 +1,47 @@
 .contacts {
-  padding: 55px 20px;
+  padding: 55px 0;
   background-color: black;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  background-image: url(../images/contacts/contact_sm.png);
+
+  @include mq(retina) {
+    background-image: url(../images/contacts/contact_sm@2x.png);
+  }
+
+  @include mq(tablet) {
+    background-image: url(../images/contacts/contact_md.png);
+
+    @include mq(retina) {
+      background-image: url(../images/contacts/contact_md@2x.png);
+    }
+  }
+
+  @include mq(desktop) {
+    background-image: url(../images/contacts/contact_lg.png);
+
+    @include mq(retina) {
+      background-image: url(../images/contacts/contact_lg@2x.png);
+    }
+  }
+}
+
+.contacts__container {
+  max-width: $mobile-res;
+  padding: 0 20px;
 }
 
 .contacts__title {
   margin-bottom: 24px;
-  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 280px;
 
   color: $white-text-color;
   font-size: 14px;
@@ -13,25 +49,49 @@
 
 .contacts__item {
   color: $accent-text-color;
+  &--modificator {
+    display: block;
+  }
 }
 
 .contacts__description {
   margin-bottom: 43px;
-  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 280px;
 
   @include font-style(12px, 600, 1.25, 0.08em, $white-text-color);
 }
 
-.contact__input {
+.contacts__input {
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
+  padding: 15px 0 15px 28px;
 
   height: 48px;
   width: 100%;
 
+  @include font-style(14px, 600, 1.21, 0.08em, $white-text-color);
+
+  background-color: transparent;
+  outline: transparent;
+  border: 1px solid $white-bg-color;
+
   &:last-child {
     margin-bottom: 0;
   }
+
+  &::placeholder {
+    @include font-style(14px, 600, 1.21, 0.08em, $white-text-color);
+  }
+}
+
+.contacts__button {
+  padding: 14px 14px;
+  margin-top: 50px;
+  text-align: center;
+
+  @include font-style(12px, 700, 1.22, 0.08em, $white-text-color);
 }
