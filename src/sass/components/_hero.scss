@@ -12,6 +12,7 @@
 .hero-container {
   @include mq(tablet) {
     display: flex;
+    justify-content: center;
   }
 }
 
