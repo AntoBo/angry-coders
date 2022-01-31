@@ -11,11 +11,26 @@
 }
 
 .benefits__list {
-  padding: 53px 14px 20px 30px;
+  padding: 20px 25px 20px 30px;
   background-color: $white-bg-color;
   box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+
+  counter-reset: section;
+}
+
+.benefits__item::before {
+  display: block;
+
+  margin-bottom: 10px;
+
+  counter-increment: section;
+  content: '\2014  0'counter(section);
+  color: $accent-text-color;
+
+  // counter-increment: section;
+  // content: 'Секция ' counter(section) ': ';
 }
 
 .benefits__item:not(:last-child) {
-  padding-bottom: 69px;
+  margin-bottom: 36px;
 }
