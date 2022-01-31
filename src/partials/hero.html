@@ -6,6 +6,23 @@
       But you’re guaranteed to get <span class="hero__message-two-accent">+25 points</span>
     </p>
     <button class="button" type="button">I want a free lesson</button>
-    <img class="hero__img" src="" alt="учебный процесс" />
+    <picture>
+      <source
+        srcset="./images/hero/hero_lg.jpg 1x, ./images/hero/hero_lg@2x.jpg 2x"
+        media="(min-width: 1366px)"
+        type="image/jpeg"
+      />
+      <source
+        srcset="./images/hero/hero_md.jpg 1x, ./images/hero/hero_md@2x.jpg 2x"
+        media="(min-width: 768px)"
+        type="image/jpeg"
+      />
+      <source
+        srcset="./images/hero/hero_sm.jpg 1x, ./images/hero/hero_sm@2x.jpg 2x"
+        media="(min-width: 320px)"
+        type="image/jpeg"
+      />
+      <img src="./images/hero/hero_sm.jpg" alt="work" width="208" />
+    </picture>
   </div>
 </section>
