@@ -1,9 +1,25 @@
 .hero {
   background-image: url(../images/hero/hero_wave1.svg);
-  background-position: 5% 100%;
+
   background-repeat: no-repeat;
+  @include mq(mobile) {
+    background-position: 5% 100%;
+  }
+  @include mq(tablet) {
+    background-position: bottom left;
+  }
+}
+.hero-container {
+  @include mq(tablet) {
+    display: flex;
+  }
 }
 
+.container-wrapper {
+  @include mq(tablet) {
+    max-width: 330px;
+  }
+}
 .section__title--hero {
   text-align: start;
 
@@ -20,6 +36,10 @@
 }
 .hero-button {
   margin-bottom: 50px;
+  @include mq(tablet) {
+    display: inline;
+    margin-right: auto;
+  }
 }
 
 .hero__wrapper {
@@ -30,6 +50,9 @@
   margin-bottom: 50px;
   @include mq(tablet) {
     width: 376px;
+    height: 320px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 
   @include mq(desktop) {
