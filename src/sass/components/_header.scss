@@ -58,7 +58,6 @@
 
   padding: 110px 40px 0 20px;
 
-  color: $white-text-color;
   background-color: rgba(17, 21, 24, 0.9);
 
   @include mq(mobile-only) {
@@ -75,8 +74,10 @@
   &__item {
     @include font-style(20px, 800, 1.8, 0.03em, none);
   }
-
-  &__item--current {
+  &__link {
+    color: $white-text-color;
+  }
+  &__link--current {
     color: $accent-text-color;
   }
 
