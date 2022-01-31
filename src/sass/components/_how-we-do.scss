@@ -1,0 +1,60 @@
+.we-do {
+  &__title {
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+
+  &__list {
+    text-align: center;
+  }
+
+  &__item {
+    position: relative;
+    box-sizing: border-box;
+    max-width: 280px;
+    min-height: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    padding: 0 12px;
+
+    text-align: center;
+
+    box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
+
+    &:nth-child(3) {
+      color: $white-text-color;
+      background-color: $accent-bg-color;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__icon {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  &__title-card {
+    font-weight: 700;
+    &::after {
+      display: block;
+
+      padding: 5px 0;
+      content: '—';
+      font-size: 30px;
+      color: $accent-icon-color;
+    }
+  }
+  &__title-card--active {
+    color: $white-text-color;
+    &::after {
+      color: inherit;
+    }
+  }
+  &__about {
+    font-weight: 500;
+    padding-bottom: 10px;
+  }
+}
