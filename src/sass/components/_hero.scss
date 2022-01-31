@@ -1,5 +1,7 @@
 .hero {
-  background-image: url(../images/hero/hero_wave.svg);
+  background-image: url(../images/hero/hero_wave1.svg);
+  background-position: 5% 100%;
+  background-repeat: no-repeat;
 }
 
 .section__title--hero {
@@ -23,8 +25,9 @@
 .hero__wrapper {
   width: 208px;
   height: 178px;
-  margin: 0 auto;
-
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 50px;
   @include mq(tablet) {
     width: 376px;
   }
