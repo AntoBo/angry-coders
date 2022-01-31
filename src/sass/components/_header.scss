@@ -1,7 +1,143 @@
-.header__logo {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+// размеры свг в лого
+// .logo-icon--hell,
+// .logo-icon--capfire,
+//  .logo-icon--en {
+//   width: 34px;
+//   height: 12px;
+//   @include mq(tablet) {
+//     width: 58px;
+//     height: 32px;
+//   }
+// }
+.header {
+  padding-top: 30px;
 
-  width: 128px;
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 1;
+
+    width: 80px;
+    height: 29px;
+  }
+  &__logo-title {
+    @include font-style(5px, bold, 1.2, 0.18em, $black-text-color);
+    text-transform: uppercase;
+  }
+  &__logo-title--orange {
+    color: $accent-text-color;
+    margin-right: 2px;
+    padding-left: 1px;
+  }
+
+  &__button {
+    padding: 0;
+    z-index: 1;
+
+    background-color: transparent;
+
+    border: none;
+
+    & .menu-close {
+      display: none;
+    }
+    &.is-open .menu-close {
+      display: block;
+    }
+    &.is-open .menu-burger {
+      display: none;
+    }
+    @include mq(desktop) {
+      display: none;
+    }
+  }
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  padding: 110px 40px 0 20px;
+
+  color: $white-text-color;
+  background-color: rgba(17, 21, 24, 0.9);
+
+  @include mq(mobile-only) {
+    display: none;
+  }
+  @include mq(tablet) {
+    display: none;
+  }
+
+  &__list {
+    margin-bottom: 50px;
+  }
+
+  &__item {
+    @include font-style(20px, 800, 1.8, 0.03em, none);
+  }
+
+  &__item--current {
+    color: $accent-text-color;
+  }
+
+  &.is-open {
+    display: block;
+    @include mq(desktop) {
+      display: none;
+    }
+
+  &__menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    padding: 110px 40px 0 20px;
+
+    color: $white-text-color;
+    background-color: rgba(17, 21, 24, 0.9);
+
+    @include mq(mobile-only) {
+      display: none;
+    }
+    @include mq(tablet) {
+      display: none;
+    }
+
+    &.is-open {
+      display: block;
+      @include mq(desktop) {
+        display: none;
+      }
+    }
+  }
+}
+
+// дополнительные классы которые добавляются через JS при нажатии бургера
+.white {
+  fill: $white-text-color;
+  @include mq(desktop) {
+    fill: $black-text-color;
+  }
+}
+.text-color {
+  color: $white-text-color;
+  @include mq(desktop) {
+    color: $black-text-color;
+  }
+}
+.no-scroll {
+  overflow: hidden;
 }
