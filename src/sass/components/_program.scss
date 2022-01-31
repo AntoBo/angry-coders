@@ -8,12 +8,17 @@
         color: $white-text-color;
     }
 }
-.container {
-    background-image: url(../images/program/program_sm.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 176px;
-    height: 137px;
+.program__container {
+    img {
+        background-image: url(../images/program/program_sm.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 176px;
+        height: 137px;
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
 }
 // .program {
 //     &__container {
