@@ -1,0 +1,37 @@
+.contacts {
+  padding: 55px 20px;
+  background-color: black;
+}
+
+.contacts__title {
+  margin-bottom: 24px;
+  text-align: center;
+
+  color: $white-text-color;
+  font-size: 14px;
+}
+
+.contacts__item {
+  color: $accent-text-color;
+}
+
+.contacts__description {
+  margin-bottom: 43px;
+  text-align: center;
+
+  @include font-style(12px, 600, 1.25, 0.08em, $white-text-color);
+}
+
+.contact__input {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+
+  height: 48px;
+  width: 100%;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
