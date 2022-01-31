@@ -1,14 +1,4 @@
-// размеры свг в лого
-// .logo-icon--hell,
-// .logo-icon--capfire,
-//  .logo-icon--en {
-//   width: 34px;
-//   height: 12px;
-//   @include mq(tablet) {
-//     width: 58px;
-//     height: 32px;
-//   }
-// }
+
 .header {
   padding-top: 30px;
 
@@ -58,7 +48,7 @@
       display: none;
     }
   }
-<<<<<<< HEAD
+
 }
 
 .menu-container {
@@ -97,7 +87,7 @@
     @include mq(desktop) {
       display: none;
     }
-=======
+
 
   &__menu-container {
     position: fixed;
@@ -124,7 +114,7 @@
         display: none;
       }
     }
->>>>>>> dev
+
   }
 }
 
