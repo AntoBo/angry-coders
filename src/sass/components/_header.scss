@@ -58,31 +58,43 @@
       display: none;
     }
   }
+}
 
-  &__menu-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
 
-    padding: 110px 40px 0 20px;
+  padding: 110px 40px 0 20px;
 
-    color: $white-text-color;
-    background-color: rgba(17, 21, 24, 0.9);
+  color: $white-text-color;
+  background-color: rgba(17, 21, 24, 0.9);
 
-    @include mq(mobile-only) {
+  @include mq(mobile-only) {
+    display: none;
+  }
+  @include mq(tablet) {
+    display: none;
+  }
+
+  &__list {
+    margin-bottom: 50px;
+  }
+
+  &__item {
+    @include font-style(20px, 800, 1.8, 0.03em, none);
+  }
+
+  &__item--current {
+    color: $accent-text-color;
+  }
+
+  &.is-open {
+    display: block;
+    @include mq(desktop) {
       display: none;
-    }
-    @include mq(tablet) {
-      display: none;
-    }
-
-    &.is-open {
-      display: block;
-      @include mq(desktop) {
-        display: none;
-      }
     }
   }
 }
