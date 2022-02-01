@@ -4,26 +4,21 @@
     }
     &__title {
         text-align: center;
-        padding: 50px 20px 43px;
         color: $white-text-color;
     }
 }
-.container {
-    background-image: url(../images/program/program_sm.png);
-    background-size: cover;
+
+.img::after {
+    content: url(../images/program/program_sm.png);
     background-repeat: no-repeat;
-    width: 176px;
-    height: 137px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: -158px;
 }
-// .program {
-//     &__container {
-//     }
-// }
 
 .list,
 .item {
     position: relative;
-    // max-width: 480px;
     margin: 0 auto;
 
     &::after {
@@ -31,7 +26,7 @@
         position: absolute;
         top: 60px;
         bottom: 70px;
-        left: 50%;
+        left: 33%;
         margin-left: -2px;
         border: 1px solid $white-text-color;
         transform: rotate(0deg);
@@ -43,7 +38,7 @@
         padding: 10px 40px;
         position: relative;
         background-color: inherit;
-        width: 50%;
+        width: 70%;
 
         &::after {
             content: "";
@@ -60,7 +55,7 @@
     }
 
     &__item {
-        left: 50%;
+        left: 33%;
 
         &::after {
             left: -7px;

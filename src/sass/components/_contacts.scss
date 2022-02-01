@@ -2,16 +2,6 @@
   padding: 55px 0;
   background-color: black;
   text-align: center;
-  // margin-left: auto;
-  // margin-right: auto;
-
-  @include mq(tablet-only) {
-    padding: 65px 0;
-  }
-
-  @include mq(desktop) {
-    padding: 100px 0 62px 0;
-  }
 
   background-repeat: no-repeat;
   background-position: center;
@@ -24,6 +14,8 @@
   }
 
   @include mq(tablet) {
+    padding: 65px 0;
+
     background-image: url(../images/contacts/contact_md.png);
 
     @include mq(retina) {
@@ -32,6 +24,8 @@
   }
 
   @include mq(desktop) {
+    padding: 100px 0 62px 0;
+
     background-image: url(../images/contacts/contact_lg.png);
 
     @include mq(retina) {
@@ -159,8 +153,11 @@
   }
 }
 
+.contacts__input:invalid {
+  background-color: red;
+}
+
 .contacts__button {
-  padding: 14px 14px;
   margin-top: 50px;
   text-align: center;
 
