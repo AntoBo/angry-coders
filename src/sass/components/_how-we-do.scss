@@ -5,16 +5,20 @@
   }
 
   &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    max-width: 1100px;
+    margin: 0 auto;
+
     text-align: center;
   }
 
   &__item {
     position: relative;
-    box-sizing: border-box;
     max-width: 280px;
     min-height: 280px;
-    margin-left: auto;
-    margin-right: auto;
     margin-bottom: 15px;
     padding: 0 12px;
 
@@ -27,11 +31,12 @@
       background-color: $accent-bg-color;
     }
 
-    &:last-child {
-      margin-bottom: 0;
+    @include grid(10px, 1);
+
+    @include mq(desktop) {
+      @include grid(10px, 3);
     }
   }
-
   &__icon {
     margin-top: 30px;
     margin-bottom: 20px;
