@@ -2,9 +2,9 @@
   background-image: url(../images/hero/hero_wave1.svg);
 
   background-repeat: no-repeat;
-  @include mq(mobile) {
-    background-position: 5% 100%;
-  }
+
+  background-position: 5% 100%;
+
   @include mq(tablet) {
     background-position: bottom left;
     background-size: 100%;
