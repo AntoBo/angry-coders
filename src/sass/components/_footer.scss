@@ -1,24 +1,23 @@
 .footer {
   background-image: linear-gradient(to bottom, $main-bg-color 72%, $black-bg-color 28%);
+
   @include mq(tablet) {
-    padding-top: 40px;
-    background-image: linear-gradient(to bottom, $main-bg-color 64%, $black-bg-color 36%);
+    background-image: linear-gradient(to bottom, $main-bg-color 60%, $black-bg-color 40%);
     @include mq(desktop) {
-      padding-top: 55px;
+      background-image: linear-gradient(to bottom, $main-bg-color 65%, $black-bg-color 35%);
+      padding-bottom: 30px;
     }
   }
 }
-.footer-container {
-  //   background-image: url(../images/instagram.svg);
-  //   background-position-x: center;
-  //   background-position-y: 100px;
-  //   background-repeat: no-repeat;
-}
+
 .footer__wrapper {
   margin-bottom: 52px;
   @include mq(tablet) {
     display: flex;
-    margin-bottom: 62px;
+    margin-bottom: 50px;
+  }
+  @include mq(desktop) {
+    margin-bottom: 65px;
   }
 }
 
@@ -28,8 +27,9 @@
   @include mq(mobile-only) {
     margin-bottom: 22px;
   }
+
   @include mq(tablet) {
-    margin-right: 202px;
+    margin-right: 198px;
   }
 }
 
@@ -47,18 +47,17 @@
 .footer__telephone {
   display: flex;
   justify-content: center;
-
   @include font-style(14px, 600, 17px, 0.08em, $black-text-color);
 
   &::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
     background-repeat: no-repeat;
-    @include mq(mobile) {
-      content: '';
-      width: 20px;
-      height: 20px;
-      margin-right: 8px;
-      background-image: url(../images/footer_phone.svg);
-    }
+    background-size: contain;
+    background-image: url(../images/footer_phone.svg);
+
     @include mq(tablet) {
       width: 24px;
       height: 23px;
