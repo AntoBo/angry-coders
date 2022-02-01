@@ -3,18 +3,20 @@
 	text-transform  : none;
 	background-color: $black-bg-color;
 	background-image: linear-gradient(to bottom, $black-bg-color 75%, $white-bg-color 25%);
-	padding         : 0px 5px;
-
+	padding         : 0;
 }
 
 // Общий контейнер
 .container.container--problems {
+
 	max-width: 310px;
+	padding  : 25px 0px;
 
 	@include mq(tablet) {
 		display       : flex;
 		flex-direction: column;
 		max-width     : 710px;
+
 
 	}
 }
@@ -22,10 +24,8 @@
 
 // Заголовок
 .problems__title {
-	font-family: 'Montserrat', -sans-serif;
-	font-size  : 24px;
-
-	padding-top   : 25px;
+	font-family   : 'Montserrat', -sans-serif;
+	font-size     : 24px;
 	padding-bottom: 25px;
 
 	&--accent {
@@ -36,6 +36,17 @@
 		text-align: left;
 		color     : $white-text-color;
 		max-width : 250px;
+
+		@include mq(tablet) {
+			max-width: 420px;
+		}
+	}
+
+	@include mq(tablet) {
+		margin-top    : 35px;
+		padding-bottom: 40px;
+
+
 	}
 }
 
@@ -45,6 +56,11 @@
 	background: $white-bg-color;
 	padding   : 20px 0px;
 	box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+
+	@include mq(tablet) {
+		max-width: 688px;
+		padding  : 20px 96px;
+	}
 }
 
 
@@ -52,17 +68,27 @@
 // Список
 .problems__list {
 	counter-reset: section;
+
+	@include mq(mobile-only) {
+		padding-left : 30px;
+		padding-right: 30px;
+	}
+
+	@include mq(tablet) {
+		display  : flex;
+		flex-wrap: wrap;
+		margin   : -15px;
+	}
 }
 
 .problems__item {
 	@include font-style(14px, 700, 1.71, 0.08em, $black-text-color);
-	padding-left  : 30px;
-	padding-right : 30px;
 	padding-bottom: 15px;
 
 	&:last-child {
 		padding-bottom: 0px;
 	}
+
 
 	&:before {
 		display: block;
@@ -73,6 +99,12 @@
 		content          : '\2014  0'counter(section);
 		color            : $accent-text-color;
 	}
+
+	@include mq(tablet) {
+		@include grid(15px, 2);
+		padding: 0px;
+	}
+
 }
 
 
