@@ -19,6 +19,9 @@
     margin: -10px;
 
     text-align: center;
+    @include mq(mobile-only) {
+      margin: -8px;
+    }
   }
 
   &__item {
@@ -38,7 +41,7 @@
       min-height: 280px;
       margin-bottom: 15px;
       padding: 20px 7px;
-      @include grid(10px, 1);
+      @include grid(8px, 1);
     }
 
     @include mq(tablet) {
