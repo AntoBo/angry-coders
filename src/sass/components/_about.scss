@@ -8,12 +8,20 @@
     }
 
     @include mq(desktop) {
-     margin-bottom: 50px; 
+      margin-bottom: 50px;
     }
   }
-
+  &__wrap {
+    @include mq(tablet) {
+      display: flex;
+      text-decoration: underline;
+    }
+  }
   &__thumb {
     margin-bottom: 20px;
+    flex-shrink: 0;
+    width: 240px; ;
+    height: 300px;
   }
 
   &__subtitle {
@@ -46,7 +54,7 @@
     font-weight: 600;
     font-size: 14px;
     line-height: 1.64;
-    padding-left: 8px;
+    margin-left: 8px;
   }
 
   &__text {
@@ -55,7 +63,7 @@
     &::before {
       margin-bottom: 25px;
       display: block;
-      content: '\2014';
+      content: '';
 
       width: 20px;
       height: 2px;
