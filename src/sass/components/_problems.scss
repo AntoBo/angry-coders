@@ -1,0 +1,72 @@
+// SECTION
+.section.problems {
+    text-transform  : none;
+    background-color: $black-bg-color;
+    padding         : 0px 5px;
+
+}
+
+// SECTION CONTAINER
+.container.container--problems {
+    max-width: 280px;
+}
+
+
+// Problems Section Title 
+.problems__title {
+    font-family: 'Montserrat', -sans-serif;
+    font-size  : 24px;
+
+    padding-top   : 25px;
+    padding-bottom: 25px;
+
+    &--accent {
+        color: $accent-text-color;
+    }
+
+    &.section__title {
+        text-align: left;
+        color     : $white-text-color;
+        max-width : 250px;
+    }
+}
+
+
+/////LIST BOX
+.problems__list--container {
+    background: $white-bg-color;
+    padding   : 20px 0px;
+    box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+}
+
+
+
+// List for problems and benefits
+.problems__list {
+    counter-reset: section;
+}
+
+.problems__item {
+    @include font-style(14px, 700, 1.71, 0.08em, $black-text-color);
+    padding-left  : 30px;
+    padding-right : 30px;
+    padding-bottom: 15px;
+
+    &:last-child {
+        padding-bottom: 0px;
+    }
+
+    &:before {
+        display: block;
+
+        margin-bottom: 5px;
+
+        counter-increment: section;
+        content          : '\2014  0'counter(section);
+        color            : $accent-text-color;
+    }
+}
+
+
+
+// WHITE//clean//COde
