@@ -47,15 +47,30 @@
 .footer__telephone {
   display: flex;
   justify-content: center;
-  &::before {
-    content: '';
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    background-image: url(../images/.footer_phone.svg);
-  }
 
   @include font-style(14px, 600, 17px, 0.08em, $black-text-color);
+
+  &::before {
+    background-repeat: no-repeat;
+    @include mq(mobile) {
+      content: '';
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+      background-image: url(../images/footer_phone.svg);
+    }
+    @include mq(tablet) {
+      width: 24px;
+      height: 23px;
+      margin-right: 10px;
+    }
+    @include mq(desktop) {
+      width: 30px;
+      height: 29px;
+      margin-right: 15px;
+    }
+  }
+
   @include mq(mobile-only) {
     margin-bottom: 30px;
   }
