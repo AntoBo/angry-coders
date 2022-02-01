@@ -1,4 +1,12 @@
+.footer {
+  @include mq(mobile) {
+    background-image: linear-gradient(to bottom, $main-bg-color 74%, $black-bg-color 26%);
+  }
+}
 .footer__logo {
+  margin-top: 30px;
+  margin-right: auto;
+  margin-left: auto;
   width: 80px;
   height: 30px;
 }
