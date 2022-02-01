@@ -1,0 +1,107 @@
+.program {
+    position: relative;
+    background-color: $black-bg-color;
+
+    &::after {
+        position: absolute;
+        bottom: -50px;
+        right: 0;
+        content: "";
+
+        display: block;
+        width: 120px;
+        height: 137px;
+
+        background-image: url(../images/program/program_sm.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include mq(retina) {
+            background-image: url(../images/program/program_sm@2x.png);
+        }
+    }
+
+    &__title {
+        text-align: center;
+        color: $white-text-color;
+        margin-bottom: 45px;
+    }
+
+    &__list {
+        margin-left: 88px;
+    }
+
+    &__item {
+        position: relative;
+        margin-bottom: 40px;
+        padding-left: 32px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:after {
+            position: absolute;
+            top: 8px;
+            left: 0;
+            width: 12px;
+            height: 12px;
+            content: "";
+
+            background-color: $accent-bg-color;
+            border-radius: 50%;
+        }
+
+        &:not(:last-child):before {
+            position: absolute;
+            top: 20px;
+            left: 6px;
+            content: "";
+
+            width: 1px;
+            height: calc(100% + 40px);
+
+            background-color: $white-bg-color;
+        }
+    }
+
+    &__item-title {
+        margin-bottom: 5px;
+
+        font-size: 14px;
+        line-height: 2;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: $white-text-color;
+    }
+
+    &__inner-item {
+        margin-bottom: 8px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__inner-title {
+        margin-bottom: 5px;
+
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1.67;
+        letter-spacing: 0.08em;
+
+        color: $accent-text-color;
+    }
+
+    &__inner-text {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 1.67;
+        letter-spacing: 0.08em;
+
+        color: $grey-text-color;
+
+        opacity: 0.5;
+    }
+}

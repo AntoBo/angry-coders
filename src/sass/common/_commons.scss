@@ -1,6 +1,27 @@
+body {
+  background-color: $white-bg-color;
+
+  font-family: 'Montserrat', sans-serif;
+  @include font-style(12px, null, 1.67, 0.08em, $grey-text-color);
+}
+
+.page {
+  overflow: hidden;
+}
+
 .container {
   margin: 0 auto;
   padding: 0 15px;
+
+  max-width: 480px;
+
+  @include mq(tablet) {
+    max-width: $tablet-res;
+  }
+
+  @include mq(desktop) {
+    max-width: $desktop-res;
+  }
 }
 
 .section {
@@ -13,6 +34,6 @@
   text-align: center;
 }
 
-.item-title {
+.item__title {
   @include font-style(14px, 800, 1.43, 0.08em, $black-text-color);
 }
