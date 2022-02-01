@@ -1,12 +1,23 @@
 .footer {
+  background-image: url(../images/instagram.svg);
+  background-repeat: no-repeat;
   @include mq(mobile) {
     background-image: linear-gradient(to bottom, $main-bg-color 74%, $black-bg-color 26%);
   }
 }
 .footer__logo {
   margin-top: 30px;
+  margin-bottom: 22px;
   margin-right: auto;
   margin-left: auto;
   width: 80px;
   height: 30px;
+}
+.footer__telephone {
+  @include font-style(14px, 600, 17px, 0.08em, $black-text-color);
+  margin-bottom: 30px;
+}
+
+.footer_telephone-icon {
+  margin-right: 10px;
 }
