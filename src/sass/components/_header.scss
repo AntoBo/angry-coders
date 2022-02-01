@@ -1,7 +1,164 @@
-.header__logo {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+// слегка увелечиваются размеры лого при изменении вьюпорта
 
-  width: 128px;
+.logo-icon--hell {
+  width: 34px;
+  height: 12px;
+  @include mq(tablet) {
+    width: 37px;
+    height: 15px;
+  }
+}
+.logo-icon--capfire {
+  width: 14px;
+  height: 19px;
+  @include mq(tablet) {
+    width: 17px;
+    height: 23px;
+  }
+}
+
+.logo-icon--en {
+  width: 23px;
+  height: 11px;
+  @include mq(tablet) {
+    width: 26px;
+    height: 14px;
+  }
+}
+
+//основные стили хедера
+.header {
+  padding-top: 30px;
+  @include mq(tablet-only) {
+    padding: 40px;
+    padding-bottom: 0;
+  }
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 1;
+
+    width: 80px;
+    height: 29px;
+    @include mq(tablet) {
+      width: 90px;
+      height: 38px;
+    }
+  }
+
+  &__logo-title {
+    @include font-style(5px, bold, 1.2, 0.18em, $black-text-color);
+    text-transform: uppercase;
+  }
+
+  &__logo-title--orange {
+    color: $accent-text-color;
+    margin-right: 2px;
+    padding-left: 1px;
+  }
+
+  &__buttons-container {
+    display: flex;
+  }
+
+  &__cons-button {
+    margin-right: 40px;
+
+    @include mq(mobile-only) {
+      display: none;
+    }
+  }
+
+  &__button-menu {
+    padding: 0;
+    z-index: 1;
+
+    background-color: transparent;
+    border: none;
+
+    & .menu-close {
+      display: none;
+    }
+    &.is-open .menu-close {
+      display: block;
+    }
+    &.is-open .menu-burger {
+      display: none;
+    }
+    @include mq(desktop) {
+      display: none;
+    }
+  }
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  padding: 110px 20px 0 20px;
+
+  background-color: rgba(17, 21, 24, 0.9);
+
+  @include mq(mobile-only) {
+    display: none;
+  }
+  @include mq(tablet) {
+    display: none;
+  }
+
+  &__list {
+    margin-bottom: 50px;
+  }
+
+  &__item {
+    @include font-style(20px, 800, 1.8, 0.03em, none);
+  }
+  &__link {
+    color: $white-text-color;
+  }
+  &__link--current {
+    color: $accent-text-color;
+  }
+
+  &.is-open {
+    display: block;
+    @include mq(desktop) {
+      display: none;
+    }
+  }
+
+  &__button {
+    margin: 0 auto;
+    @include mq(tablet) {
+      display: none;
+    }
+  }
+}
+
+// дополнительные классы которые добавляются через JS при нажатии бургера
+.white {
+  fill: $white-text-color;
+  @include mq(desktop) {
+    fill: $black-text-color;
+  }
+}
+.text-color {
+  color: $white-text-color;
+  @include mq(desktop) {
+    color: $black-text-color;
+  }
+}
+.no-scroll {
+  overflow: hidden;
 }

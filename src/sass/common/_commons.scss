@@ -5,9 +5,23 @@ body {
   @include font-style(12px, null, 1.67, 0.08em, $grey-text-color);
 }
 
+.page {
+  overflow: hidden;
+}
+
 .container {
   margin: 0 auto;
   padding: 0 15px;
+
+  max-width: 480px;
+
+  @include mq(tablet) {
+    max-width: $tablet-res;
+  }
+
+  @include mq(desktop) {
+    max-width: $desktop-res;
+  }
 }
 
 .section {
