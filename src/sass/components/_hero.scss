@@ -2,9 +2,9 @@
   background-image: url(../images/hero/hero_wave1.svg);
 
   background-repeat: no-repeat;
-  @include mq(mobile) {
-    background-position: 5% 100%;
-  }
+
+  background-position: 5% 100%;
+
   @include mq(tablet) {
     background-position: bottom left;
     background-size: 100%;
@@ -17,7 +17,10 @@
   }
 }
 
-.container-wrapper {
+.hero__wrapper-text {
+  @include mq(mobile-only) {
+    margin-bottom: 50px;
+  }
   @include mq(tablet) {
     max-width: 330px;
   }
@@ -26,7 +29,7 @@
     margin-right: 115px;
   }
 }
-.section__title--hero {
+.hero__title {
   text-align: start;
   margin-bottom: 8px;
   @include mq(tablet) {
@@ -60,13 +63,14 @@
   }
 }
 .hero-button {
-  margin-bottom: 50px;
   @include mq(tablet) {
     display: inline;
-    margin-right: auto;
   }
   @include mq(desktop) {
     padding: 27px 70px;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.14em;
   }
 }
 
@@ -75,7 +79,10 @@
   height: 178px;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 50px;
+
+  @include mq(mobile-only) {
+    margin-bottom: 50px;
+  }
   @include mq(tablet) {
     width: 376px;
     height: 320px;
