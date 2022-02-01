@@ -16,7 +16,7 @@
     flex-wrap: wrap;
     justify-content: center;
 
-    margin: 0 auto;
+    margin: -10px;
 
     text-align: center;
   }
@@ -43,11 +43,13 @@
 
     @include mq(tablet) {
       @include grid(10px, 2);
+      max-width: 334px;
       padding: 40px 15px;
     }
 
     @include mq(desktop) {
       @include grid(10px, 3);
+      max-width: 425px;
       padding: 40px 30px;
     }
   }
