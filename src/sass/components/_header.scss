@@ -79,6 +79,7 @@
     @include mq(desktop) {
       display: flex;
       flex-wrap: wrap;
+      margin-right: -120px;
     }
     &-item {
       text-transform: uppercase;
