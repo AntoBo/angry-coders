@@ -7,6 +7,9 @@
   background-color: $bg-btn-color;
 
   text-transform: uppercase;
+
+  cursor: pointer;
+
   @include mq(mobile-only) {
     @include font-style(12px, 700, 1.25, 0.08em, $white-text-color);
   }

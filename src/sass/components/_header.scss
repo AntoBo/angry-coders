@@ -98,10 +98,14 @@
   }
 
   &__cons-button {
-    margin-right: 40px;
-
     @include mq(mobile-only) {
       display: none;
+    }
+    @include mq(tablet-only) {
+      margin-right: 40px;
+    }
+    @include mq(desktop) {
+      padding: 26px 23px;
     }
   }
 
