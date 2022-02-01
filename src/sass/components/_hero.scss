@@ -60,10 +60,11 @@
   }
 }
 .hero-button {
-  margin-bottom: 50px;
+  @include mq(mobile-only) {
+    margin-bottom: 50px;
+  }
   @include mq(tablet) {
     display: inline;
-    margin-right: auto;
   }
   @include mq(desktop) {
     padding: 27px 70px;
@@ -78,7 +79,10 @@
   height: 178px;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 50px;
+
+  @include mq(mobile-only) {
+    margin-bottom: 50px;
+  }
   @include mq(tablet) {
     width: 376px;
     height: 320px;
