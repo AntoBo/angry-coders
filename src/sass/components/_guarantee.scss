@@ -1,9 +1,5 @@
 .guarantee {
   padding: 0;
-
-  @include mq(tablet-only) {
-    padding: 0 40px;
-  }
 }
 
 .guarantee-container {
@@ -12,8 +8,12 @@
     max-width: $mobile-res;
   }
 
-  @include mq(tablet-only) {
+  @include mq(tablet) {
     max-width: $tablet-res;
+  }
+
+  @include mq(desktop) {
+    max-width: $desktop-res;
   }
 }
 
@@ -21,6 +21,12 @@
   margin-bottom: 30px;
 
   font-size: 26px;
+
+  @include mq(desktop) {
+    margin-bottom: 50px;
+
+    font-size: 46px;
+  }
 }
 
 .guarantee__list {
@@ -33,6 +39,10 @@
   @include mq(tablet-only) {
     padding: 30px 50px 30px 0;
   }
+
+  @include mq(desktop) {
+    padding: 50px 112px 45px 0;
+  }
 }
 .guarantee__item {
   position: relative;
@@ -40,17 +50,25 @@
   margin-left: 27px;
 
   padding-left: 28px;
-  padding-bottom: 20px;
 
   color: $secondary-text-color;
   font-weight: 500;
 
   &:not(:last-child) {
+    padding-bottom: 20px;
     border-left: 1px dashed $grey-text-color;
   }
+
   @include mq(tablet-only) {
     padding-left: 32px;
     margin-left: 86px;
+  }
+
+  @include mq(desktop) {
+    padding-left: 41px;
+    margin-left: 123px;
+
+    font-size: 20px;
   }
 }
 
@@ -63,7 +81,17 @@
   display: block;
   width: 14.67px;
   height: 20px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
   background-image: url(../images/icon-campfire.svg);
+
+  @include mq(desktop) {
+    width: 21.5px;
+    height: 30px;
+  }
 }
 
 .guarantee__accent {
