@@ -6,6 +6,8 @@
     @include mq(desktop) {
       font-weight: 800;
       font-size: 46px;
+      text-align: left;
+      margin-bottom: 40px;
     }
   }
 
@@ -14,26 +16,13 @@
     flex-wrap: wrap;
     justify-content: center;
 
-    // max-width: 1100px;
     margin: 0 auto;
 
     text-align: center;
-
-    @include mq(tablet) {
-      max-width: 610px;
-    }
-
-    @include mq(desktop) {
-      max-width: 1160px;
-    }
   }
 
   &__item {
-    position: relative;
-    max-width: 290px;
-    min-height: 280px;
-    margin-bottom: 15px;
-    padding: 0 8px;
+    padding: 20px 7px;
 
     text-align: center;
 
@@ -44,19 +33,25 @@
       background-color: $accent-bg-color;
     }
 
-    @include grid(10px, 1);
+    @include mq(mobile-only) {
+      max-width: 290px;
+      min-height: 280px;
+      margin-bottom: 15px;
+      padding: 20px 7px;
+      @include grid(10px, 1);
+    }
 
     @include mq(tablet) {
       @include grid(10px, 2);
-      padding: 0 12px;
+      padding: 40px 15px;
     }
 
     @include mq(desktop) {
       @include grid(10px, 3);
+      padding: 40px 30px;
     }
   }
   &__icon {
-    margin-top: 30px;
     margin-bottom: 20px;
   }
   &__title-card {
@@ -87,7 +82,7 @@
 
     @include mq(desktop) {
       font-size: 18px;
-      line-height: 28px;
+      line-height: 1.55;
     }
   }
 }
