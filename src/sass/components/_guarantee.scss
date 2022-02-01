@@ -1,0 +1,55 @@
+.guarantee {
+  padding: 0;
+}
+
+.guarantee-container {
+  padding: 0;
+  @include mq(mobile-only) {
+    max-width: $mobile-res;
+  }
+}
+
+.guarantee__title {
+  margin-bottom: 30px;
+
+  font-size: 26px;
+}
+
+.guarantee__list {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  background-color: $secondary-bg-color;
+}
+.guarantee__item {
+  position: relative;
+
+  margin-left: 27px;
+
+  padding-left: 25px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+
+  color: $secondary-text-color;
+  font-weight: 500;
+
+  &:not(:last-child) {
+    border-left: 1px dashed $grey-text-color;
+  }
+}
+
+.guarantee__item::before {
+  position: absolute;
+  left: -8px;
+
+  content: '';
+
+  display: block;
+  width: 14.67px;
+  height: 20px;
+  background-image: url(../images/icon-campfire.svg);
+}
+
+.guarantee__accent {
+  color: $accent-text-color;
+}
