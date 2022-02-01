@@ -4,10 +4,17 @@
 }
 
 .section__title--benefits {
-  width: 180px;
   margin-bottom: 30px;
   color: $white-text-color;
-  text-align: left;
+  @include mq(mobile-only) {
+    max-width: 180px;
+    text-align: left;
+  }
+
+  @include mq(tablet) {
+    text-align: center;
+    font-size: 26px;
+  }
 }
 
 .benefits__list {
@@ -18,19 +25,18 @@
   counter-reset: section;
 }
 
-.benefits__item::before {
-  display: block;
+.benefits__item {
+  &::before {
+    display: block;
 
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 
-  counter-increment: section;
-  content: '\2014  0'counter(section);
-  color: $accent-text-color;
+    counter-increment: section;
+    content: '\2014  0'counter(section);
+    color: $accent-text-color;
+  }
 
-  // counter-increment: section;
-  // content: 'Секция ' counter(section) ': ';
-}
-
-.benefits__item:not(:last-child) {
-  margin-bottom: 36px;
+  &:not(:last-child) {
+    margin-bottom: 36px;
+  }
 }
