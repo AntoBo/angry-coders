@@ -3,36 +3,28 @@
 
 	function init() {
 		//Links 
-		let programlink  = d.getElementById('programlink');
-		let aboutlink  = d.getElementById('aboutlink');
-		let anchor3Link  = d.getElementById('anchor3Link');
-		let contactslink  = d.getElementById('contactslink');
-		let anchor1Link2 = d.getElementById('anchor1Link2');
-		let anchor2Link2 = d.getElementById('anchor2Link2');
-		let anchor3Link2 = d.getElementById('anchor3Link2');
-		let anchor4Link2 = d.getElementById('anchor4Link2');
+		let programlink  = d.getElementById('programLilk');
+		let aboutlink  = d.getElementById('aboutLilk');
+		let anchor3link  = d.getElementById('anchor3Lilk');
+		let contactslink  = d.getElementById('contactsLilk');
 		//Anchors
 		let program      = d.getElementById('program');
 		let about      = d.getElementById('about');
 		let anchor3      = d.getElementById('anchor3');
 		let contacts      = d.getElementById('contacts');
 		
-		programlink.addEventListener('click', (e) => { scrollTo(program, e) }, false);
-		anchor1Link2.addEventListener('click', (e) => { scrollTo(anchor1, e) }, false);
-		anchor2Link.addEventListener('click', (e) => { scrollTo(anchor2, e) }, false);
-		anchor2Link2.addEventListener('click', (e) => { scrollTo(anchor2, e) }, false);
-		// anchor2Link.onclick = function() { scrollToSimple(document.documentElement, 500, 3000); }
-		// anchor2Link2.onclick = function() { scrollToSimple(document.documentElement, 0, 3000); }
+		programLink.addEventListener('click', (e) => { scrollTo(program, e) }, false);
+		aboutLink.addEventListener('click', (e) => { scrollTo(about, e) }, false);
+		// aboutLlnk.onclick = function() { scrollToSimple(document.documentElement, 500, 3000); }
+		// aboutLlnk2.onclick = function() { scrollToSimple(document.documentElement, 0, 3000); }
 		anchor3Link.addEventListener('click', (e) => { scrollTo(anchor3, e) }, false);
-		anchor3Link2.addEventListener('click', (e) => { scrollTo(anchor3, e) }, false);
-		anchor4Link.addEventListener('click', (e) => { scrollTo(anchor4.offsetTop, e) }, false);
-		anchor4Link2.addEventListener('click', (e) => { scrollTo(anchor4.offsetTop, e) }, false);
+		contactsLink.addEventListener('click', (e) => { scrollTo(contacts.offsetTop, e) }, false);
 		
 		console.log(about); //DEBUG
 		console.log('program: '+scrollTopValue(program)+' / '+offsetTopValue(program)); //DEBUG
 		console.log('about: '+scrollTopValue(about)+' / '+offsetTopValue(about)); //DEBUG
 		console.log('anchor3: '+scrollTopValue(anchor3)+' / '+offsetTopValue(anchor3)); //DEBUG
-		console.log('anchor4: '+scrollTopValue(anchor4)+' / '+offsetTopValue(anchor4)); //DEBUG
+		console.log('contacts: '+scrollTopValue(contacts)+' / '+offsetTopValue(contacts)); //DEBUG
 		// d.addEventListener('scroll', (e) => { console.log(e) }, false); //DEBUG
 		
 		console.log('App loaded. Have fun!');
@@ -77,7 +69,7 @@
 		// console.log('document.body:', document.body); //DEBUG
 		let start;
 		
-		if (isMouseEvent(from)) { //FIXME : the scroll starts at the link, not where the screen really is : fix that
+		if (isMouseEvent(from)) { //FIXME : the scroll starts at the link, nlt where the screen really is : fix that
 			// start = from.target.offsetTop;
 			start = from.pageY; //FIXME
 		}
