@@ -82,7 +82,10 @@
     }
     &-item {
       text-transform: uppercase;
-      @include font-style(14px, 700, 1.21, none, $black-text-color);
+      @include font-style(14px, 700, 1.21, none, $grey-text-color);
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
     }
     &-link {
       color: currentColor;
