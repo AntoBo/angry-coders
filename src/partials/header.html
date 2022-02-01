@@ -1,16 +1,46 @@
 <header class="section header">
   <div class="container">
-    <a class="header__logo" href=""><svg class="header__logo-icon" width="34" height="12">
+    <a class="header__logo" href="">
+      <svg class="header__logo-icon" width="34" height="12">
         <use href="./images/icons.svg#icon-hell"></use>
       </svg>
-      <svg class="header__logo-icon" width="14" height="19">
+      <svg class="header__logo-icon logo-icon--capfire" width="14" height="19">
         <use href="./images/icons.svg#icon-campfire"></use>
       </svg>
-      <svg class="header__logo-icon" width="23" height="11">
+      <svg class="header__logo-icon logo-icon--en" width="23" height="11">
         <use href="./images/icons.svg#icon-en"></use>
       </svg>
-      <span class="header__logo-title">Hellish english</span>
+      <span class="header__logo-title">
+        <span class="header__logo-title--orange">Hellish</span>english</span>
     </a>
-    <button type="button">бургер</button>
+    <div class="header__buttons-container">
+      <button class="button button--inverted header__cons-button" type="button">
+        Consultation by phone
+      </button>
+      <button class="header__button-menu" type="button" aria-controls="menu-container" aria-expanded="false"
+        data-menu-button>
+        <svg width="20" height="12" aria-label="Переключатель мобильного меню">
+          <use class="menu-close is-open" href="./images/icons.svg#icon-menu-close"></use>
+          <use class="menu-burger" href="./images/icons.svg#icon-burger"></use>
+        </svg>
+      </button>
+      <div class="menu-container modal-open" id="menu-container" data-menu>
+        <ul class="menu-container__list">
+          <li class="menu-container__item">
+            <a class="menu-container__link" href="">Studying program</a>
+          </li>
+          <li class="menu-container__item">
+            <a class="menu-container__link menu-container__link--current" href="">About</a>
+          </li>
+          <li class="menu-container__item">
+            <a class="menu-container__link" href="">Training options</a>
+          </li>
+          <li class="menu-container__item"><a class="menu-container__link" href="">Contacts</a></li>
+        </ul>
+        <button class="button button--inverted menu-container__button" type="button">
+          Consultation by phone
+        </button>
+      </div>
+    </div>
   </div>
 </header>
