@@ -26,10 +26,24 @@
             background-size: cover;
             width: 384px;
             height: 280px;
-            top: 735px;
+            top: 778px;
 
             @include mq(retina) {
                 background-image: url(../images/program/program_md@2x.png);
+            }
+        }
+
+        @include mq(desktop) {
+            background-image: url(../images/program/program_lg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 715px;
+            height: 502px;
+            top: 635px;
+            left: 0px;
+
+            @include mq(retina) {
+                background-image: url(../images/program/program_lg@2x.png);
             }
         }
     }
@@ -41,13 +55,14 @@
 
         @include mq(tablet-only) {
             text-align-last: start;
-            margin-left: 25px;
             font-size: 26px;
         }
 
         @include mq(desktop) {
             font-size: 46px;
             line-height: 1.3;
+            padding: 75px 0 92px 120px;
+            display: flex;
         }
     }
 
@@ -56,6 +71,7 @@
 
         @include mq(desktop) {
             display: flex;
+            margin-left: 0;
         }
     }
 
@@ -66,6 +82,11 @@
 
         @include mq(tablet-only) {
             padding-left: 50px;
+            margin-right: -100px;
+        }
+
+        @include mq(desktop) {
+            padding-left: 30px;
         }
 
         &:last-child {
@@ -84,8 +105,10 @@
             border-radius: 50%;
 
             @include mq(desktop) {
-                top: -40px;
+                top: -50px;
                 left: auto;
+                width: 17px;
+                height: 17px;
             }
         }
 
@@ -102,6 +125,11 @@
 
             @include mq(tablet-only) {
                 height: calc(100% + 25px);
+            }
+            @include mq(desktop) {
+                width: calc(100% + 29px);
+                height: 1px;
+                top: -42px;
             }
         }
     }
@@ -166,6 +194,7 @@
         @include mq(desktop) {
             font-size: 18px;
             line-height: 1.55;
+            width: 240px;
         }
     }
 }
