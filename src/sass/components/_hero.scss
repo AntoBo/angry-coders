@@ -1,25 +1,73 @@
 .hero {
   background-image: url(../images/hero/hero_wave1.svg);
-  background-position: 5% 100%;
+
   background-repeat: no-repeat;
+  @include mq(mobile) {
+    background-position: 5% 100%;
+  }
+  @include mq(tablet) {
+    background-position: bottom left;
+    background-size: 100%;
+  }
+}
+.hero-container {
+  @include mq(tablet) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
+.container-wrapper {
+  @include mq(tablet) {
+    max-width: 330px;
+  }
+  @include mq(desktop) {
+    max-width: 495px;
+    margin-right: 115px;
+  }
+}
 .section__title--hero {
   text-align: start;
-
   margin-bottom: 8px;
+  @include mq(tablet) {
+    font-size: 26px;
+  }
+
+  @include mq(desktop) {
+    font-size: 58px;
+    min-width: 495px;
+  }
 }
 .hero__message-one {
   @include font-style(14px, 500, 22px, 0.08em, $grey-text-color);
+  @include mq(desktop) {
+    font-size: 20px;
+    line-height: 33px;
+  }
 }
 .hero__message-two {
   margin-bottom: 52px;
+  @include mq(desktop) {
+    font-size: 20px;
+    line-height: 33px;
+    min-width: 495px;
+  }
 }
 .hero__message-two-accent {
   color: $accent-text-color;
+  @include mq(desktop) {
+    color: $black-text-color;
+  }
 }
 .hero-button {
   margin-bottom: 50px;
+  @include mq(tablet) {
+    display: inline;
+    margin-right: auto;
+  }
+  @include mq(desktop) {
+    padding: 27px 70px;
+  }
 }
 
 .hero__wrapper {
@@ -30,9 +78,13 @@
   margin-bottom: 50px;
   @include mq(tablet) {
     width: 376px;
+    height: 320px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 
   @include mq(desktop) {
+    height: 718px;
     width: 842px;
   }
 }
