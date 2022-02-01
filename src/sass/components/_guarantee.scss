@@ -1,11 +1,19 @@
 .guarantee {
   padding: 0;
+
+  @include mq(tablet-only) {
+    padding: 0 40px;
+  }
 }
 
 .guarantee-container {
   padding: 0;
   @include mq(mobile-only) {
     max-width: $mobile-res;
+  }
+
+  @include mq(tablet-only) {
+    max-width: $tablet-res;
   }
 }
 
@@ -18,16 +26,20 @@
 .guarantee__list {
   padding-top: 50px;
   padding-bottom: 50px;
+  padding-right: 20px;
 
   background-color: $secondary-bg-color;
+
+  @include mq(tablet-only) {
+    padding: 30px 50px 30px 0;
+  }
 }
 .guarantee__item {
   position: relative;
 
   margin-left: 27px;
 
-  padding-left: 25px;
-  padding-right: 20px;
+  padding-left: 28px;
   padding-bottom: 20px;
 
   color: $secondary-text-color;
@@ -35,6 +47,10 @@
 
   &:not(:last-child) {
     border-left: 1px dashed $grey-text-color;
+  }
+  @include mq(tablet-only) {
+    padding-left: 32px;
+    margin-left: 86px;
   }
 }
 
