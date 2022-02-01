@@ -1,4 +1,4 @@
-// SECTION
+// Секция
 .section.problems {
 	text-transform  : none;
 	background-color: $black-bg-color;
@@ -7,13 +7,20 @@
 
 }
 
-// SECTION CONTAINER
+// Общий контейнер
 .container.container--problems {
-	max-width: 280px;
+	max-width: 310px;
+
+	@include mq(tablet) {
+		display       : flex;
+		flex-direction: column;
+		max-width     : 710px;
+
+	}
 }
 
 
-// Problems Section Title 
+// Заголовок
 .problems__title {
 	font-family: 'Montserrat', -sans-serif;
 	font-size  : 24px;
@@ -33,7 +40,7 @@
 }
 
 
-/////LIST BOX
+/////Контейнер списка
 .problems__list--container {
 	background: $white-bg-color;
 	padding   : 20px 0px;
@@ -42,7 +49,7 @@
 
 
 
-// List for problems and benefits
+// Список
 .problems__list {
 	counter-reset: section;
 }
@@ -67,5 +74,7 @@
 		color            : $accent-text-color;
 	}
 }
+
+
 
 // WHITE//clean//COde
