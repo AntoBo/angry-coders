@@ -41,11 +41,15 @@ body {
     font-size: 26px;
   }
 
-  @include mq(tablet) {
+  @include mq(desktop) {
     font-size: 46px;
   }
 }
 
 .item__title {
   @include font-style(14px, 800, 1.43, 0.08em, $black-text-color);
+
+  @include mq(desktop) {
+    font-size: 20px;
+  }
 }
