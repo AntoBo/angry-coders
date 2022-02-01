@@ -17,7 +17,7 @@
 
   &__item {
     position: relative;
-    max-width: 280px;
+    max-width: 290px;
     min-height: 280px;
     margin-bottom: 15px;
     padding: 0 12px;
@@ -30,8 +30,11 @@
       color: $white-text-color;
       background-color: $accent-bg-color;
     }
-
     @include grid(10px, 1);
+
+    @include mq(tablet) {
+      @include grid(10px, 2);
+    }
 
     @include mq(desktop) {
       @include grid(10px, 3);
