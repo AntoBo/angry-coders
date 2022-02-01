@@ -17,7 +17,10 @@
   }
 }
 
-.container-wrapper {
+.hero__wrapper-text {
+  @include mq(mobile-only) {
+    margin-bottom: 50px;
+  }
   @include mq(tablet) {
     max-width: 330px;
   }
@@ -26,7 +29,7 @@
     margin-right: 115px;
   }
 }
-.section__title--hero {
+.hero__title {
   text-align: start;
   margin-bottom: 8px;
   @include mq(tablet) {
@@ -60,9 +63,6 @@
   }
 }
 .hero-button {
-  @include mq(mobile-only) {
-    margin-bottom: 50px;
-  }
   @include mq(tablet) {
     display: inline;
   }
