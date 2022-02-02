@@ -1,8 +1,15 @@
 .reviews {
+  padding: 50px 0;
+  @include mq(desktop) {
+    padding: 130px;
+  }
   text-align: center;
 
   &__title {
     margin-bottom: 24px;
+    @include mq(tablet) {
+      margin-bottom: 30px;
+    }
   }
 
   &__logo-img {
@@ -10,7 +17,7 @@
     margin-bottom: 24px;
 
     display: block;
-    max-width: 90px;
+    width: 90px;
     height: auto;
   }
 
@@ -31,44 +38,53 @@
   }
 
   &__about {
-    margin-bottom: 62px;
     font-weight: 500;
     color: $secondary-text-color;
+  }
+
+  &__content {
+    margin-bottom: 62px;
   }
 
   &__about-more {
     color: $accent-text-color;
   }
 
+  // BUTTONS
+
+  &__switch {
+    padding: 10px 0;
+    border: none;
+    background-color: $white-btn-color;
+    cursor: pointer;
+    &--left {
+      margin-right: 24px;
+    }
+    &--right {
+      margin-left: 24px;
+    }
+  }
+
+  &__switch-icon--left {
+    transform: rotate(180deg);
+  }
+
+  // UL WITH IMAGES
+
+  &__peoples-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   &__list {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    &::after,
-    &::before {
-      margin-left: 24px;
-      display: block;
-
-      content: '\2192';
-      width: 20px;
-      height: 25px;
-
-      color: $accent-text-color;
-    }
-
-    &::before {
-      margin-right: 24px;
-      margin-left: 0;
-      transform: rotate(180deg);
-    }
-  }
-
-  &__before {
   }
 
   &__item {
-    max-width: 54px;
+    width: 54px;
     &:not(:last-child) {
       margin-right: 10px;
     }
