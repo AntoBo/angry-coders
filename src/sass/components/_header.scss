@@ -27,16 +27,13 @@
 }
 
 //основные стили хедера
-.header {
-  padding-top: 30px;
-  @include mq(tablet-only) {
-    padding: 40px;
-    padding-bottom: 0;
-  }
 
+.header {
   &__flex {
+    @include mq(notDesktop) {
+      justify-content: space-between;
+    }
     display: flex;
-    justify-content: space-between;
     align-items: baseline;
   }
 
@@ -52,11 +49,17 @@
       width: 90px;
       height: 38px;
     }
+    @include mq(desktop) {
+      margin-right: 144px;
+    }
   }
 
   &__logo-title {
-    @include font-style(5px, bold, 1.2, 0.18em, $black-text-color);
     text-transform: uppercase;
+    @include font-style(5px, bold, 1.2, 0.18em, $black-text-color);
+    @include mq(tablet) {
+      @include font-style(8px, bold, 1.25, 0.18em, $black-text-color);
+    }
   }
 
   &__logo-title--orange {
@@ -65,15 +68,40 @@
     padding-left: 1px;
   }
 
+  &__nav {
+    display: none;
+    @include mq(desktop) {
+      display: flex;
+    }
+
+    &-item {
+      text-transform: uppercase;
+      @include font-style(14px, 700, 1.21, none, $grey-text-color);
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
+    }
+    &-link {
+      color: currentColor;
+    }
+  }
+
   &__buttons-container {
     display: flex;
+    @include mq(desktop) {
+      margin-left: auto;
+    }
   }
 
   &__cons-button {
-    margin-right: 40px;
-
     @include mq(mobile-only) {
       display: none;
+    }
+    @include mq(tablet-only) {
+      margin-right: 40px;
+    }
+    @include mq(desktop) {
+      padding: 26px 47px;
     }
   }
 
@@ -106,7 +134,10 @@
   width: 100vw;
   height: 100vh;
 
-  padding: 110px 20px 0 20px;
+  padding: 108px 20px 0 20px;
+  @include mq(tablet-only) {
+    padding-top: 158px;
+  }
 
   background-color: rgba(17, 21, 24, 0.9);
 
@@ -118,7 +149,9 @@
   }
 
   &__list {
-    margin-bottom: 50px;
+    @include mq(mobile-only) {
+      margin-bottom: 50px;
+    }
   }
 
   &__item {
@@ -133,6 +166,10 @@
 
   &.is-open {
     display: block;
+    @include mq(tablet-only) {
+      display: flex;
+      justify-content: center;
+    }
     @include mq(desktop) {
       display: none;
     }
@@ -147,6 +184,7 @@
 }
 
 // дополнительные классы которые добавляются через JS при нажатии бургера
+
 .white {
   fill: $white-text-color;
   @include mq(desktop) {
