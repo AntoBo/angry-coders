@@ -49,7 +49,7 @@
     @include mq(desktop) {
       font-size: 30px;
       padding-bottom: 15px;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
   }
 
@@ -60,7 +60,7 @@
       margin-bottom: 48px;
     }
     @include mq(desktop) {
-      margin-bottom: 65px;
+      margin-bottom: 55px;
     }
   }
 
@@ -73,7 +73,7 @@
       margin-bottom: 0;
     }
     @include mq(desktop) {
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
   }
 
@@ -109,7 +109,7 @@
     @include mq(desktop) {
       font-size: 18px;
       line-height: 1.55;
-      margin-bottom: 50px;
+      margin-bottom: 45px;
     }
 
     &::before {
@@ -126,6 +126,9 @@
   &__paragraph {
     @include mq(desktop) {
       margin-bottom: 25px;
+      &:last-child{
+        margin-bottom: 0;
+      }
     }
   }
   &__link {
