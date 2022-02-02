@@ -1,10 +1,10 @@
 .footer {
-  background-image: linear-gradient(to bottom, $main-bg-color 72%, $black-bg-color 28%);
+  background-image: linear-gradient(to bottom, $white-bg-color 72%, $black-bg-color 28%);
 
   @include mq(tablet) {
-    background-image: linear-gradient(to bottom, $main-bg-color 60%, $black-bg-color 40%);
+    background-image: linear-gradient(to bottom, $white-bg-color 60%, $black-bg-color 40%);
     @include mq(desktop) {
-      background-image: linear-gradient(to bottom, $main-bg-color 65%, $black-bg-color 35%);
+      background-image: linear-gradient(to bottom, $white-bg-color 65%, $black-bg-color 35%);
       padding-bottom: 30px;
     }
   }
@@ -15,6 +15,7 @@
   @include mq(tablet) {
     display: flex;
     margin-bottom: 50px;
+    align-items: center;
   }
   @include mq(desktop) {
     margin-bottom: 65px;
@@ -62,6 +63,7 @@
       width: 24px;
       height: 23px;
       margin-right: 10px;
+      align-items: center;
     }
     @include mq(desktop) {
       width: 30px;
