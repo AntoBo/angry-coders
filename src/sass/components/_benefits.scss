@@ -1,36 +1,42 @@
-.section--benefits {
+.benefits {
   background-color: $black-bg-color;
   background-image: linear-gradient(to bottom, $black-bg-color 67%, $white-bg-color 67%);
-}
 
-.section__title--benefits {
-  width: 180px;
-  margin-bottom: 30px;
-  color: $white-text-color;
-  text-align: left;
-}
+  &__title {
+    margin-bottom: 30px;
+    color: $white-text-color;
+    @include mq(mobile-only) {
+      max-width: 180px;
+      text-align: left;
+    }
 
-.benefits__list {
-  padding: 20px 25px 20px 30px;
-  background-color: $white-bg-color;
-  box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+    @include mq(tablet) {
+      text-align: center;
+      font-size: 26px;
+    }
+  }
 
-  counter-reset: section;
-}
+  &__list {
+    padding: 20px 25px 20px 30px;
+    background-color: $white-bg-color;
+    box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
 
-.benefits__item::before {
-  display: block;
+    counter-reset: section;
+  }
 
-  margin-bottom: 10px;
+  &__item {
+    &::before {
+      display: block;
 
-  counter-increment: section;
-  content: '\2014  0'counter(section);
-  color: $accent-text-color;
+      margin-bottom: 10px;
 
-  // counter-increment: section;
-  // content: 'Секция ' counter(section) ': ';
-}
+      counter-increment: section;
+      content: '\2014  0'counter(section);
+      color: $accent-text-color;
+    }
 
-.benefits__item:not(:last-child) {
-  margin-bottom: 36px;
+    &:not(:last-child) {
+      margin-bottom: 36px;
+    }
+  }
 }
