@@ -23,13 +23,15 @@
   }
 
   @include mq(tablet) {
-    max-width: 420px;
+    max-width    : 420px;
+    margin-bottom: 50px;
   }
 
   @include mq(desktop) {
     max-width    : 900px;
     font-size    : 46px;
     margin-bottom: 70px;
+
   }
 }
 
@@ -50,16 +52,17 @@
 
   @include mq(tablet) {
     max-width: 688px;
-    padding  : 25px 96px;
+    padding  : 25px 95px;
     display  : flex;
     flex-wrap: wrap;
-    margin   : -15px;
+    margin   : -24px;
   }
 
   @include mq(desktop) {
-    padding: 60px 110px;
+    display: flex;
+    padding: 70px 110px;
     width  : 1315px;
-    margin : -30px;
+    margin : -40px;
 
   }
 
@@ -84,12 +87,12 @@
   }
 
   @include mq(tablet) {
-    @include grid(15px, 2);
+    @include grid(24px, 2);
     padding: 0px;
   }
 
   @include mq(desktop) {
-    @include grid(30px, 3);
+    @include grid(40px, 3);
     padding: 0px;
   }
 }
