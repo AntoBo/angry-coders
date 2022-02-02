@@ -3,7 +3,7 @@
   background-image: linear-gradient(to bottom, $black-bg-color 67%, $white-bg-color 67%);
 
   &__title {
-    margin-bottom: 54px;
+    margin-bottom: 30px;
     color        : $white-text-color;
 
     @include mq(mobile-only) {
@@ -62,13 +62,13 @@
     padding  : 25px 95px;
     display  : flex;
     flex-wrap: wrap;
-    margin   : -24px;
+
   }
 
   @include mq(desktop) {
     display: flex;
     padding: 70px 110px;
-    margin : -40px;
+
 
   }
 }
