@@ -1,9 +1,11 @@
 .guarantee {
-  padding: 0;
+  padding-bottom: 50px;
+  @include mq(mobile-only) {
+    background-image: linear-gradient(to bottom, $white-bg-color 17%, $secondary-bg-color 17%);
+  }
 }
 
 .guarantee-container {
-  padding: 0;
   @include mq(mobile-only) {
     max-width: $mobile-res;
   }
@@ -18,9 +20,13 @@
 }
 
 .guarantee__title {
-  margin-bottom: 30px;
+  margin-bottom: 80px;
 
   font-size: 26px;
+
+  @include mq(tablet-only) {
+    margin-bottom: 30px;
+  }
 
   @include mq(desktop) {
     margin-bottom: 50px;
@@ -30,56 +36,50 @@
 }
 
 .guarantee__list {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  padding-right: 20px;
-
   background-color: $secondary-bg-color;
 
   @include mq(tablet-only) {
-    padding: 30px 50px 30px 0;
+    padding: 30px 50px 30px 80px;
   }
 
   @include mq(desktop) {
-    padding: 50px 112px 45px 0;
+    padding: 50px 112px 45px 112px;
   }
 }
+
 .guarantee__item {
   position: relative;
 
-  margin-left: 27px;
-
-  padding-left: 28px;
+  padding-left: 35px;
 
   color: $secondary-text-color;
   font-weight: 500;
+  letter-spacing: 0;
 
   &:not(:last-child) {
-    padding-bottom: 20px;
-    border-left: 1px dashed $grey-text-color;
+    margin-bottom: 20px;
   }
 
   @include mq(tablet-only) {
-    padding-left: 32px;
-    margin-left: 86px;
+    padding-left: 39px;
   }
 
   @include mq(desktop) {
-    padding-left: 41px;
-    margin-left: 123px;
+    padding-left: 52px;
 
     font-size: 20px;
   }
 }
 
-.guarantee__item::before {
+.guarantee__item::after {
   position: absolute;
-  left: -8px;
+  top: 0;
+  left: 0;
 
   content: '';
 
   display: block;
-  width: 14.67px;
+  width: 15px;
   height: 20px;
 
   background-repeat: no-repeat;
@@ -89,8 +89,25 @@
   background-image: url(../images/icon-campfire.svg);
 
   @include mq(desktop) {
-    width: 21.5px;
+    width: 22px;
     height: 30px;
+  }
+}
+
+.guarantee__item {
+  &:not(:last-child)::before {
+    position: absolute;
+    left: 7px;
+    content: '';
+
+    display: block;
+    width: 1px;
+    height: calc(100% + 20px);
+    border-left: 1px dashed $grey-text-color;
+
+    @include mq(desktop) {
+      left: 10px;
+    }
   }
 }
 
