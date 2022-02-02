@@ -1,5 +1,6 @@
 .reviews {
   text-align: center;
+
   &__title {
     margin-bottom: 24px;
   }
@@ -9,22 +10,46 @@
     margin-bottom: 24px;
 
     display: block;
-    width: 90px;
+    max-width: 90px;
     height: auto;
   }
+
   &__socials {
     display: inline-block;
     margin-bottom: 24px;
   }
+
   &__initials {
     margin-bottom: 16px;
     @include font-style(14px, 700, 1.3, 0.08em, $accent-text-color);
   }
+
   &__education {
     margin-bottom: 16px;
-    @include font-style(null, 500, 1.25, null, $grey-text-color);
-  }
-  &__about {
     font-weight: 500;
+    line-height: 1.25;
+  }
+
+  &__about {
+    margin-bottom: 62px;
+    font-weight: 500;
+    color: $secondary-text-color;
+  }
+
+  &__about-more {
+    color: $accent-text-color;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__item {
+    max-width: 54px;
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
   }
 }
