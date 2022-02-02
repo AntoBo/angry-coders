@@ -9,6 +9,7 @@
   }
 }
 .logo-icon--capfire {
+  fill: $accent-bg-color;
   width: 14px;
   height: 19px;
   @include mq(tablet) {
