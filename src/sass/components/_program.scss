@@ -12,15 +12,15 @@
         content: "";
 
         display: block;
-        width: 120px;
+        width: 176px;
         height: 137px;
 
-        background-image: url(../images/program/program_sm.png);
+        background-image: url(../images/program/programm_sm.png);
         background-repeat: no-repeat;
         background-size: cover;
 
         @include mq(retina) {
-            background-image: url(../images/program/program_sm@2x.png);
+            background-image: url(../images/program/programm_sm@2x.png);
         }
 
         @include mq(tablet-only) {
