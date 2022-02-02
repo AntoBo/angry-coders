@@ -29,10 +29,9 @@
   }
 
   @include mq(desktop) {
-
+    max-width     : 820px;
     margin-top    : 0px;
     font-size     : 46px;
-    padding-top   : 100px;
     padding-bottom: 70px;
   }
 }
