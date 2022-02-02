@@ -5,34 +5,63 @@
 
     @include mq(tablet) {
       margin-bottom: 30px;
+      font-size: 26px;
     }
 
     @include mq(desktop) {
       margin-bottom: 50px;
+      font-size: 46px;
     }
   }
   &__wrap {
     @include mq(tablet) {
       display: flex;
-      text-decoration: underline;
+    }
+    @include mq(desktop) {
+      display: flex;
     }
   }
   &__thumb {
     margin-bottom: 20px;
     flex-shrink: 0;
-    width: 240px; ;
+    width: 240px;
     height: 300px;
-  }
 
+    @include mq(desktop) {
+      width: 530px;
+      height: 660px;
+    }
+  }
+  &__section-text {
+    @include mq(tablet) {
+      margin-left: 43px;
+    }
+    @include mq(desktop) {
+      margin-left: 30px;
+    }
+  }
   &__subtitle {
     border-bottom: 1px solid $grey-text-color;
     text-align: left;
     padding-bottom: 10px;
     margin-bottom: 20px;
+
+    @include mq(desktop) {
+      font-size: 30px;
+      padding-bottom: 15px;
+      margin-bottom: 25px;
+    }
   }
 
   &__list {
     margin-bottom: 36px;
+
+    @include mq(tablet) {
+      margin-bottom: 48px;
+    }
+    @include mq(desktop) {
+      margin-bottom: 55px;
+    }
   }
 
   &__item {
@@ -43,6 +72,9 @@
     &:last-child {
       margin-bottom: 0;
     }
+    @include mq(desktop) {
+      margin-bottom: 25px;
+    }
   }
 
   &__icon {
@@ -50,15 +82,35 @@
   }
 
   &__description {
-    color: $black-text-color;
     font-weight: 600;
     font-size: 14px;
     line-height: 1.64;
+    color: $black-text-color;
     margin-left: 8px;
+
+    @include mq(tablet) {
+      font-size: 12px;
+      line-height: 1.25;
+    }
+    @include mq(desktop) {
+      font-size: 16px;
+      line-height: 1.25;
+    }
   }
 
   &__text {
     margin-bottom: 10px;
+
+    @include mq(tablet) {
+      font-size: 10px;
+      line-height: 2;
+      margin-bottom: 30px;
+    }
+    @include mq(desktop) {
+      font-size: 18px;
+      line-height: 1.55;
+      margin-bottom: 45px;
+    }
 
     &::before {
       margin-bottom: 25px;
@@ -71,8 +123,28 @@
     }
   }
 
+  &__paragraph {
+    @include mq(desktop) {
+      margin-bottom: 25px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
   &__link {
     color: $accent-text-color;
     text-decoration: underline;
+    font-size: 12px;
+    line-height: 1.66;
+    font-weight: 500;
+
+    @include mq(tablet) {
+      font-size: 12px;
+      line-height: 1.66;
+    }
+    @include mq(desktop) {
+      font-size: 18px;
+      line-height: 1.55;
+    }
   }
 }
