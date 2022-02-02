@@ -62,13 +62,13 @@
     padding  : 25px 95px;
     display  : flex;
     flex-wrap: wrap;
-    margin   : -24px;
+
   }
 
   @include mq(desktop) {
     display: flex;
     padding: 70px 110px;
-    margin : -40px;
+
 
   }
 }
