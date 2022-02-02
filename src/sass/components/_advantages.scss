@@ -1,0 +1,27 @@
+.advantages {
+  padding-bottom: 50px;
+  &__list {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 215px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__title {
+    margin-left: 10px;
+  }
+  &__icon {
+    flex-shrink: 0;
+  }
+}
+
+.title-hidden {
+  position: fixed;
+  transform: scale(0);
+}
