@@ -51,7 +51,6 @@
   }
 
   @include mq(tablet) {
-    max-width: 688px;
     padding  : 25px 95px;
     display  : flex;
     flex-wrap: wrap;
@@ -61,13 +60,8 @@
   @include mq(desktop) {
     display: flex;
     padding: 70px 110px;
-    width  : 1315px;
     margin : -40px;
 
-  }
-
-  @include mq(desktop) {
-    max-width: 1315px;
   }
 }
 
