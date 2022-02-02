@@ -27,10 +27,13 @@
 }
 
 //основные стили хедера
+
 .header {
   &__flex {
+    @include mq(notDesktop) {
+      justify-content: space-between;
+    }
     display: flex;
-    justify-content: space-between;
     align-items: baseline;
   }
 
@@ -45,6 +48,9 @@
     @include mq(tablet) {
       width: 90px;
       height: 38px;
+    }
+    @include mq(desktop) {
+      margin-right: 144px;
     }
   }
 
@@ -61,13 +67,13 @@
     margin-right: 2px;
     padding-left: 1px;
   }
+
   &__nav {
     display: none;
     @include mq(desktop) {
       display: flex;
-      flex-wrap: wrap;
-      margin-right: -120px;
     }
+
     &-item {
       text-transform: uppercase;
       @include font-style(14px, 700, 1.21, none, $grey-text-color);
@@ -82,6 +88,9 @@
 
   &__buttons-container {
     display: flex;
+    @include mq(desktop) {
+      margin-left: auto;
+    }
   }
 
   &__cons-button {
@@ -92,7 +101,7 @@
       margin-right: 40px;
     }
     @include mq(desktop) {
-      padding: 26px 23px;
+      padding: 26px 47px;
     }
   }
 
