@@ -3,7 +3,7 @@
   background-image: linear-gradient(to bottom, $black-bg-color 67%, $white-bg-color 67%);
 
   &__title {
-    margin-bottom: 30px;
+    margin-bottom: 54px;
     color        : $white-text-color;
 
     @include mq(mobile-only) {
