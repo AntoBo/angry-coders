@@ -36,14 +36,14 @@
 }
 
 .guarantee__list {
-  background-color: $secondary-bg-color;
-
   @include mq(tablet-only) {
     padding: 30px 50px 30px 80px;
+    background-color: $secondary-bg-color;
   }
 
   @include mq(desktop) {
     padding: 50px 112px 45px 112px;
+    background-color: $secondary-bg-color;
   }
 }
 

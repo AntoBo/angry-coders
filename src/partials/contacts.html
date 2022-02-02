@@ -11,8 +11,29 @@
     </p>
     <form class="contacts__form">
       <div>
-        <input class="contacts__input" type="text" pattern="[A-Z][a-z]{4,10}" placeholder="Name*" />
-        <input class="contacts__input" type="tel" pattern="[0-9]{10}" placeholder="Phone*" />
+        <label class="contacts__label">
+          <input
+            class="contacts__input"
+            type="text"
+            pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+            placeholder="Antony Black"
+          />
+          <span class="contacts__accent">Name*</span>
+          <span class="contacts__validation">Username must be two words separated by space</span>
+        </label>
+        <label class="contacts__label">
+          <input
+            class="contacts__input"
+            type="tel"
+            pattern="+[0-9]{3}[0-9]{10}"
+            placeholder="38(099) 111-11-11"
+            minlength="12"
+            maxlength="12"
+            required
+          />
+          <span class="contacts__accent">Phone*</span>
+          <span class="contacts__validation">The number must contain 12 digits</span>
+        </label>
       </div>
       <button class="button contacts__button" type="submit">i want a free lesson</button>
     </form>
