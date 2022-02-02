@@ -26,10 +26,9 @@
 
   &__item {
     padding: 20px 7px;
-
     text-align: center;
-
     box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
+    transition-duration: 300ms;
 
     &:nth-child(3) {
       color: $white-text-color;
@@ -68,7 +67,6 @@
     }
     &::after {
       display: block;
-
       padding: 5px 0;
       content: '—';
       font-size: 30px;
@@ -88,6 +86,41 @@
     @include mq(desktop) {
       font-size: 18px;
       line-height: 1.55;
+    }
+  }
+}
+// Анимация карточек
+
+.we-do__item:hover .we-do__title-card {
+  color: $white-text-color;
+}
+.we-do__item:hover {
+  @include mq(tablet) {
+    background-color: $accent-bg-color;
+    color: $white-text-color;
+  }
+  @include mq(desktop) {
+    background-color: $accent-bg-color;
+    color: $white-text-color;
+  }
+}
+.we-do__item:hover .we-do__title-card {
+  @include mq(tablet) {
+    &::after {
+      display: block;
+      padding: 5px 0;
+      content: '—';
+      font-size: 30px;
+      color: $white-icon-color;
+    }
+  }
+  @include mq(desktop) {
+    &::after {
+      display: block;
+      padding: 5px 0;
+      content: '—';
+      font-size: 30px;
+      color: $white-icon-color;
     }
   }
 }
