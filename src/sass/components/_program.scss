@@ -2,7 +2,11 @@
     position: relative;
     background-color: $black-bg-color;
     @include mq(tablet-only) {
+<<<<<<< Updated upstream
         padding-bottom: 225px;
+=======
+        padding-bottom: 175px;
+>>>>>>> Stashed changes
     }
 
     &::after {
