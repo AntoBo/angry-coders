@@ -57,6 +57,7 @@
   }
   &__icon {
     margin-bottom: 20px;
+    fill: $accent-icon-color;
   }
   &__title-card {
     font-weight: 700;
@@ -124,3 +125,7 @@
     }
   }
 }
+.we-do__item:hover .we-do__icon{
+  fill: $white-icon-color ;
+}
+
