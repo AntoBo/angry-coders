@@ -1,0 +1,104 @@
+// Секция
+.section.problems {
+  text-transform  : none;
+  background-color: $black-bg-color;
+  background-image: linear-gradient(to bottom, $black-bg-color 75%, $white-bg-color 25%);
+
+  @include mq(tablet) {
+    padding-bottom: 50px;
+  }
+
+  @include mq(desktop) {
+    padding-bottom: 105px;
+  }
+
+}
+
+
+
+
+// Заголовок
+.problems__title {
+  font-family  : 'Montserrat', -sans-serif;
+  align-self   : flex-start;
+  font-size    : 24px;
+  margin-bottom: 25px;
+  text-align   : left;
+  color        : $white-text-color;
+
+  &--accent {
+    color: $accent-text-color;
+  }
+
+  @include mq(tablet) {
+    max-width    : 420px;
+    margin-bottom: 50px;
+  }
+
+  @include mq(desktop) {
+    max-width    : 900px;
+    font-size    : 46px;
+    margin-bottom: 70px;
+
+  }
+}
+
+
+
+
+// Список
+.problems__list {
+  counter-reset: section;
+
+  background: $white-bg-color;
+  box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+  text-align: left;
+
+  @include mq(mobile-only) {
+    padding: 20px 30px;
+  }
+
+  @include mq(tablet) {
+    padding  : 25px 95px;
+    display  : flex;
+    flex-wrap: wrap;
+    margin   : -24px;
+  }
+
+  @include mq(desktop) {
+    display: flex;
+    padding: 70px 110px;
+    margin : -40px;
+
+  }
+}
+
+.problems__item {
+  padding-bottom: 15px;
+
+  &:last-child {
+    padding-bottom: 0px;
+  }
+
+  &:before {
+    display          : block;
+    margin-bottom    : 5px;
+    counter-increment: section;
+    content          : '\2014  0'counter(section);
+    color            : $accent-text-color;
+  }
+
+  @include mq(tablet) {
+    @include grid(24px, 2);
+    padding: 0px;
+  }
+
+  @include mq(desktop) {
+    @include grid(40px, 3);
+    padding: 0px;
+  }
+}
+
+
+
+// WHITE//clean//COde
