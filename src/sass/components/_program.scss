@@ -43,7 +43,7 @@
             width: 715px;
             height: 502px;
             top: 662px;
-            left: 0px;
+            left: calc(50% - 926px);
 
             @include mq(retina) {
                 background-image: url(../images/program/program_lg@2x.png);
@@ -64,7 +64,7 @@
 
         @include mq(desktop) {
             margin-bottom: 100px;
-
+            margin-top: 29px;
             font-size: 46px;
             line-height: 1.3;
         }
@@ -141,7 +141,7 @@
             }
 
             @include mq(desktop) {
-                width: 100vw;
+                width: 200vw;
                 height: 1px;
                 top: 8px;
                 left: 50%;
