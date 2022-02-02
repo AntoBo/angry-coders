@@ -28,23 +28,10 @@
 
 //основные стили хедера
 .header {
-  padding-top: 30px;
-  @include mq(tablet-only) {
-    padding: 40px;
-    padding-bottom: 0;
-  }
-  @include mq(desktop) {
-    padding-top: 33px;
-  }
-
   &__flex {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    @include mq(desktop) {
-      margin: 0 auto;
-      max-width: 1316px;
-    }
   }
 
   &__logo {
