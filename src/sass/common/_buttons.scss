@@ -24,3 +24,14 @@
 
   color: $accent-text-color;
 }
+.button:focus,
+.button:hover {
+  background-color: $white-btn-color;
+  color: $bg-btn-color;
+  border: 2px solid $accent-btn-color;
+}
+.button--inverted:focus,
+.button--inverted:hover {
+  background-color: $bg-btn-color;
+  color: $white-btn-color;
+}
