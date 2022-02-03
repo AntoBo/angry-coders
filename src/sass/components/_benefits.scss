@@ -2,14 +2,20 @@
   background-color: $black-bg-color;
 
   &--primary {
-    background-image: linear-gradient(to bottom, $black-bg-color 67%, $white-bg-color 67%);
+    background-image: linear-gradient(to bottom, $black-bg-color 68%, $white-bg-color 32%);
+    @include mq(desktop) {
+      padding-top: 100px;
+
+      background-image: url(../images/problems/campfire.svg),
+        linear-gradient(to bottom, $black-bg-color 68%, $white-bg-color 32%);
+      background-repeat: no-repeat;
+      background-position: top calc(50% - 65px) right, center;
+      background-size: 28% 50%, contain;
+    }
   }
 
   &--secondary {
-    background-image: url(../images/problems/noun_Campfire_2425646.svg),
-      linear-gradient(to bottom, $black-bg-color 75%, $white-bg-color 25%);
-    background-repeat: no-repeat;
-    background-position: top calc(50% + 2px) right, center;
+    background-image: linear-gradient(to bottom, $black-bg-color 67%, $white-bg-color 67%);
 
     @include mq(tablet) {
       padding-bottom: 50px;
@@ -30,9 +36,9 @@
       margin-bottom: 70px;
     }
 
-    &--primary{
+    &--primary {
       @include mq(tablet) {
-        max-width: 568px;
+        max-width: 460px;
       }
       @include mq(desktop) {
         max-width: 866px;
@@ -49,8 +55,13 @@
       }
     }
 
-    &-accent {
+    span {
       color: $accent-text-color;
+    }
+
+    em {
+      display: block;
+      font-style: normal;
     }
   }
 }
