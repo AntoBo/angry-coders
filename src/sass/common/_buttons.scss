@@ -9,6 +9,9 @@
   text-transform: uppercase;
 
   cursor: pointer;
+  transition-property: color, background-color, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   @include mq(mobile-only) {
     @include font-style(12px, 700, 1.25, 0.08em, $white-text-color);
