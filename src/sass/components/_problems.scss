@@ -2,7 +2,10 @@
 .section.problems {
   text-transform: none;
   background-color: $black-bg-color;
-  background-image: linear-gradient(to bottom, $black-bg-color 75%, $white-bg-color 25%);
+  background-image: url(../images/problems/noun_Campfire_2425646.svg),
+    linear-gradient(to bottom, $black-bg-color 75%, $white-bg-color 25%);
+  background-repeat: no-repeat;
+  background-position: top calc(50% - 24px) right calc(50% - 641px), center;
 
   @include mq(tablet) {
     padding-bottom: 50px;
