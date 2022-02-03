@@ -118,10 +118,11 @@
     color: $accent-text-color;
   }
 
-  // BUTTONS
+  // BUTTONS and overlay
 
   &__switch {
     padding: 10px 0;
+    z-index: 1;
 
     border: none;
     background-color: transparent;
@@ -132,11 +133,49 @@
       top: 150px;
 
       &--left {
-        // left: 0;
         left: 30px;
+
+        &:hover {
+          animation: arrow-left 1s linear infinite;
+
+          @keyframes arrow-left {
+            0% {
+              left: 30px;
+            }
+            50% {
+              left: 25px;
+            }
+            100% {
+              left: 30px;
+            }
+          }
+        }
+
+        &:hover ~ .reviews__overlay--left {
+          display: block;
+        }
       }
       &--right {
         right: 30px;
+
+        &:hover {
+          animation: arrow 1s linear infinite;
+
+          @keyframes arrow {
+            0% {
+              right: 30px;
+            }
+            50% {
+              right: 25px;
+            }
+            100% {
+              right: 30px;
+            }
+          }
+        }
+        &:hover ~ .reviews__overlay--right {
+          display: block;
+        }
       }
     }
 
@@ -145,6 +184,28 @@
     }
     &--right {
       margin-left: 24px;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    width: 10%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      rgb(255, 255, 255) 2%,
+      rgb(221, 220, 220) 49%,
+      rgb(255, 255, 255) 98%
+    );
+    opacity: 0.7;
+    display: none;
+    cursor: pointer;
+    &--left {
+      left: 0;
+    }
+    &--right {
+      right: 0;
     }
   }
 
