@@ -88,6 +88,9 @@
       &:hover {
         color: $accent-text-color;
       }
+      &:focus {
+        color: $accent-text-color;
+      }
     }
   }
 
