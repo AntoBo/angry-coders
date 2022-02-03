@@ -85,6 +85,12 @@
     }
     &-link {
       color: currentColor;
+      &:hover {
+        color: $accent-text-color;
+      }
+      &:focus {
+        color: $accent-text-color;
+      }
     }
   }
 
