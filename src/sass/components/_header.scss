@@ -165,9 +165,6 @@
   &__link {
     color: $white-text-color;
   }
-  &__link--current {
-    color: $accent-text-color;
-  }
 
   &.is-open {
     display: block;
