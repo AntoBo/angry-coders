@@ -32,7 +32,20 @@
       <button class="button button--inverted header__cons-button" type="button">
         Consultation by phone
       </button>
+
+      <!--Burger-->
       <button
+        class="header__button-menu hamburger hamburger--spin"
+        aria-controls="menu-container"
+        aria-expanded="false"
+        data-menu-button
+        type="button"
+      >
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+      <!-- <button
         class="header__button-menu"
         type="button"
         aria-controls="menu-container"
@@ -43,7 +56,7 @@
           <use class="menu-close is-open" href="./images/icons.svg#icon-menu-close"></use>
           <use class="menu-burger" href="./images/icons.svg#icon-burger"></use>
         </svg>
-      </button>
+      </button> -->
       <div class="menu-container modal-open" id="menu-container" data-menu>
         <ul class="menu-container__list">
           <li class="menu-container__item">
