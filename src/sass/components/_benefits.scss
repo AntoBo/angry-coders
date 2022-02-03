@@ -1,53 +1,62 @@
 .benefits {
   background-color: $black-bg-color;
-  background-image: linear-gradient(to bottom, $black-bg-color 67%, $white-bg-color 67%);
 
-  &__title {
-    margin-bottom: 54px;
-    color: $white-text-color;
+  &--primary {
+    background-image: linear-gradient(to bottom, $black-bg-color 67%, $white-bg-color 67%);
+  }
 
-    @include mq(mobile-only) {
-      max-width: 180px;
-      text-align: left;
-    }
+  &--secondary {
+    background-image: url(../images/problems/noun_Campfire_2425646.svg),
+      linear-gradient(to bottom, $black-bg-color 75%, $white-bg-color 25%);
+    background-repeat: no-repeat;
+    background-position: top calc(50% + 2px) right, center;
 
     @include mq(tablet) {
-      text-align: center;
-      font-size: 26px;
+      padding-bottom: 50px;
     }
 
     @include mq(desktop) {
-      visibility: hidden;
+      padding-bottom: 105px;
     }
   }
 
-  // &__list {
-  //   padding         : 20px 25px 20px 30px;
-  //   background-color: $white-bg-color;
-  //   box-shadow      : -5px 8px 26px rgba(0, 0, 0, 0.04);
+  &__title {
+    margin-bottom: 30px;
 
-  //   counter-reset: section;
-  // }
+    text-align: left;
+    color: $white-text-color;
 
-  // &__item {
-  //   &::before {
-  //     display: block;
+    @include mq(desktop) {
+      margin-bottom: 70px;
+    }
 
-  //     margin-bottom: 10px;
+    &--primary{
+      @include mq(tablet) {
+        max-width: 568px;
+      }
+      @include mq(desktop) {
+        max-width: 866px;
+      }
+    }
 
-  //     counter-increment: section;
-  //     content          : '\2014  0'counter(section);
-  //     color            : $accent-text-color;
-  //   }
+    &--secondary {
+      @include mq(tablet) {
+        text-align: center;
+      }
 
-  //   &:not(:last-child) {
-  //     margin-bottom: 36px;
-  //   }
-  // }
+      @include mq(desktop) {
+        display: none;
+      }
+    }
+
+    &-accent {
+      color: $accent-text-color;
+    }
+  }
 }
 
 // Список
-.problems__list {
+.benefits__list {
   counter-reset: section;
   position: relative;
   background: $white-bg-color;
@@ -62,17 +71,14 @@
     padding: 25px 95px;
     display: flex;
     flex-wrap: wrap;
-
   }
 
   @include mq(desktop) {
-
     padding: 70px 110px;
-
   }
 }
 
-.problems__item {
+.benefits__item {
   &:before {
     display: block;
     margin-bottom: 5px;
@@ -91,7 +97,6 @@
 
   @include mq(tablet) {
     @include grid(24px, 2);
-
   }
 
   @include mq(desktop) {
