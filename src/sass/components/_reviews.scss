@@ -128,12 +128,18 @@
     background-color: transparent;
     cursor: pointer;
 
-    @include mq(tablet-only) {
+    @include mq(tablet) {
       position: absolute;
       top: 150px;
+      @include mq(desktop) {
+        top: 200px;
+      }
 
       &--left {
         left: 30px;
+        @include mq(desktop) {
+          left: -40px;
+        }
 
         &:hover {
           animation: arrow-left 1s linear infinite;
@@ -149,6 +155,19 @@
               left: 30px;
             }
           }
+          @include mq(desktop) {
+            @keyframes arrow-left {
+              0% {
+                left: -40px;
+              }
+              50% {
+                left: -35px;
+              }
+              100% {
+                left: -40px;
+              }
+            }
+          }
         }
 
         &:hover ~ .reviews__overlay--left {
@@ -157,6 +176,9 @@
       }
       &--right {
         right: 30px;
+        @include mq(desktop) {
+          right: -40px;
+        }
 
         &:hover {
           animation: arrow 1s linear infinite;
@@ -170,6 +192,20 @@
             }
             100% {
               right: 30px;
+            }
+          }
+
+          @include mq(desktop) {
+            @keyframes arrow {
+              0% {
+                right: -40px;
+              }
+              50% {
+                right: -35px;
+              }
+              100% {
+                right: -40px;
+              }
             }
           }
         }
@@ -191,6 +227,9 @@
     position: absolute;
     top: 0;
     width: 10%;
+    @include mq(desktop) {
+      width: 15%;
+    }
     height: 100%;
     background: linear-gradient(
       90deg,
@@ -203,9 +242,15 @@
     cursor: pointer;
     &--left {
       left: 0;
+      @include mq(desktop) {
+        left: -110px;
+      }
     }
     &--right {
       right: 0;
+      @include mq(desktop) {
+        right: -110px;
+      }
     }
   }
 
