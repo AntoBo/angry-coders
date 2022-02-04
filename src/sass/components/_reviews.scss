@@ -42,6 +42,12 @@
     }
   }
 
+  &__card {
+    @include mq(tablet) {
+      display: flex !important;
+    }
+  }
+
   &__img-container {
     text-align: center;
     @include mq(tablet) {
@@ -119,146 +125,6 @@
     color: $accent-text-color;
   }
 
-  // BUTTONS and overlay
-
-  &__switch {
-    padding: 10px 0;
-    z-index: 1;
-
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-
-    @include mq(tablet) {
-      position: absolute;
-      top: 150px;
-      @include mq(desktop) {
-        top: 200px;
-      }
-
-      &--left {
-        left: 30px;
-        @include mq(desktop) {
-          left: -40px;
-        }
-
-        &:hover {
-          animation: arrow-left 1s linear infinite;
-
-          @keyframes arrow-left {
-            0% {
-              left: 30px;
-            }
-            50% {
-              left: 25px;
-            }
-            100% {
-              left: 30px;
-            }
-          }
-          @include mq(desktop) {
-            @keyframes arrow-left {
-              0% {
-                left: -40px;
-              }
-              50% {
-                left: -35px;
-              }
-              100% {
-                left: -40px;
-              }
-            }
-          }
-        }
-
-        &:hover ~ .reviews__overlay--left {
-          display: block;
-        }
-      }
-      &--right {
-        right: 30px;
-        @include mq(desktop) {
-          right: -40px;
-        }
-
-        &:hover {
-          animation: arrow 1s linear infinite;
-
-          @keyframes arrow {
-            0% {
-              right: 30px;
-            }
-            50% {
-              right: 25px;
-            }
-            100% {
-              right: 30px;
-            }
-          }
-
-          @include mq(desktop) {
-            @keyframes arrow {
-              0% {
-                right: -40px;
-              }
-              50% {
-                right: -35px;
-              }
-              100% {
-                right: -40px;
-              }
-            }
-          }
-        }
-        &:hover ~ .reviews__overlay--right {
-          display: block;
-        }
-      }
-    }
-
-    &--left {
-      margin-right: 24px;
-    }
-    &--right {
-      margin-left: 24px;
-    }
-  }
-
-  &__overlay {
-    position: absolute;
-    top: 0;
-    width: 10%;
-    @include mq(desktop) {
-      width: 15%;
-    }
-    height: 100%;
-    background: linear-gradient(
-      90deg,
-      rgb(255, 255, 255) 2%,
-      rgb(221, 220, 220) 49%,
-      rgb(255, 255, 255) 98%
-    );
-    opacity: 0.7;
-    display: none;
-    cursor: pointer;
-    &--left {
-      left: 0;
-      @include mq(desktop) {
-        left: -110px;
-      }
-    }
-    &--right {
-      right: 0;
-      @include mq(desktop) {
-        right: -110px;
-      }
-    }
-  }
-
-  &__switch-icon--left {
-    transform: rotate(180deg);
-  }
-
   // UL WITH IMAGES
 
   &__peoples-container {
@@ -281,6 +147,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    max-width: 250px;
+    margin: 0 auto;
+
+    @include mq(tablet) {
+      max-width: 580px;
+    }
   }
 
   &__item {
@@ -291,7 +164,82 @@
   }
 }
 
-.slick-next:before,
-.slick-prev:before {
-  color: red;
+// BUTTONS and overlay
+
+.reviews__item.slick-slide {
+  @include mq(mobile-only) {
+    opacity: 0;
+    @include animate(opacity);
+  }
+}
+
+.reviews__item.slick-active {
+  @include mq(mobile-only) {
+    opacity: 1;
+    @include animate(opacity);
+  }
+}
+
+.reviews__item.slick-current {
+  border: 3px solid $accent-btn-color;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.reviews__list.slick-slider .slick-arrow:before {
+  display: block;
+
+  content: '';
+  width: 40px;
+  height: 40px;
+  padding: 3px;
+  opacity: 1;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+  z-index: 100;
+}
+.slick-prev.slick-arrow:before {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+  background-image: url(../images/icons/prev-arrow.svg);
+}
+.slick-next.slick-arrow:before {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+  background-image: url(../images/icons/next-arrow.svg);
+}
+
+.slick-prev.slick-arrow {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+
+  @include mq(tablet) {
+    top: -170px;
+    left: -80px;
+  }
+
+  @include mq(desktop) {
+    top: -200px;
+    left: -370px;
+  }
+}
+.slick-next.slick-arrow {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+
+  @include mq(tablet) {
+    top: -170px;
+    right: -70px;
+  }
+
+  @include mq(desktop) {
+    top: -200px;
+    right: -350px;
+  }
 }
