@@ -1,6 +1,7 @@
 (() => {
   const menuBtnRef = document.querySelector('[data-menu-button]');
   const mobileMenuRef = document.querySelector('[data-menu]');
+  const navLink = document.querySelector('.header__nav-link');
   const body = document.querySelector('.body');
   const a = document.querySelector('.header__logo');
   const span = document.querySelector('.header__logo-title');
