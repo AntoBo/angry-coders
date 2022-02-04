@@ -1,9 +1,9 @@
 (() => {
   const menuBtnRef = document.querySelector("[data-menu-button]");
   const mobileMenuRef = document.querySelector("[data-menu]");
+  const navLink = document.querySelector(".header__nav-link");
   const body = document.querySelector(".body");
   const a = document.querySelector(".header__logo");
-  const menu = document.querySelector(".header__menu-container");
   const span = document.querySelector(".header__logo-title");
   
   menuBtnRef.addEventListener("click", () => {
@@ -18,4 +18,12 @@
     a.classList.toggle("white");
     span.classList.toggle("text-color");
   });
+
+    navLink.addEventListener("click", () => {
+    const expanded =
+      navLink.getAttribute("aria-expanded") === "true" || false;
+
+    body.classList.toggle("no-scroll");
+  });
+  
 })();
