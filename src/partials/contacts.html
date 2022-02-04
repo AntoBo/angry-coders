@@ -1,0 +1,42 @@
+<section class="section contacts anchor" id="contacts">
+  <div class="container contacts__container">
+    <h2 class="section__title contacts__title">
+      Registration for a <span class="contacts__item">free</span> phone
+      <span class="contacts__item">consultation</span> on the nuances of English UPE
+    </h2>
+    <p class="contacts__description">
+      Leave a request for participation in a
+      <span class="contacts__item contacts__item--modificator">free lesson.</span> A&nbsp;consultant
+      will contact you and answer your questions
+    </p>
+    <form class="contacts__form">
+      <div>
+        <label class="contacts__label">
+          <input
+            class="contacts__input"
+            type="text"
+            pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+            placeholder="Antony Black"
+            required
+          />
+          <span class="contacts__accent">Name*</span>
+          <span class="contacts__validation">Username must be two words separated by space</span>
+        </label>
+        <label class="contacts__label">
+          <input
+            class="contacts__input"
+            type="tel"
+            pattern="+[0-9]{3}[0-9]{10}"
+            placeholder="38(099) 111-11-11"
+            minlength="12"
+            maxlength="12"
+            required
+          />
+          <span class="contacts__accent">Phone*</span>
+          <span class="contacts__validation">The number must contain 12 digits</span>
+        </label>
+      </div>
+      <button class="button contacts__button shake-lr" type="submit">i want a free lesson</button>
+    </form>
+  </div>
+</section>

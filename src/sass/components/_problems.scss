@@ -1,0 +1,31 @@
+// Секция
+.problems {
+  background-color: $black-bg-color;
+
+
+}
+
+// Заголовок
+.problems__title {
+  font-family: 'Montserrat', -sans-serif;
+  align-self: flex-start;
+  font-size: 24px;
+  margin-bottom: 25px;
+  text-align: left;
+  color: $white-text-color;
+
+  &--accent {
+    color: $accent-text-color;
+  }
+
+  @include mq(tablet) {
+    max-width: 420px;
+    margin-bottom: 50px;
+  }
+
+  @include mq(desktop) {
+    max-width: 900px;
+    font-size: 46px;
+    margin-bottom: 70px;
+  }
+}

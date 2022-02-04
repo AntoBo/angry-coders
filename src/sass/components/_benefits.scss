@@ -1,0 +1,120 @@
+.benefits {
+  background-color: $black-bg-color;
+
+  &--primary {
+    background-image: linear-gradient(to bottom, $black-bg-color 68%, $white-bg-color 32%);
+    @include mq(desktop) {
+      padding-top: 100px;
+
+      background-image: url(../images/problems/campfire.svg),
+        linear-gradient(to bottom, $black-bg-color 68%, $white-bg-color 32%);
+      background-repeat: no-repeat;
+      background-position: top calc(50% - 65px) right, center;
+      background-size: 28% 50%, contain;
+    }
+  }
+
+  &--secondary {
+    background-image: linear-gradient(to bottom, $black-bg-color 67%, $white-bg-color 67%);
+
+    @include mq(tablet) {
+      padding-bottom: 50px;
+    }
+
+    @include mq(desktop) {
+      padding-bottom: 105px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+
+    text-align: left;
+    color: $white-text-color;
+
+    @include mq(desktop) {
+      margin-bottom: 70px;
+    }
+
+    &--primary {
+      @include mq(tablet) {
+        max-width: 460px;
+      }
+      @include mq(desktop) {
+        max-width: 866px;
+      }
+    }
+
+    &--secondary {
+      @include mq(tablet) {
+        text-align: center;
+      }
+
+      @include mq(desktop) {
+        display: none;
+      }
+    }
+
+    span {
+      color: $accent-text-color;
+    }
+
+    em {
+      display: block;
+      font-style: normal;
+    }
+  }
+}
+
+// Список
+.benefits__list {
+  counter-reset: section;
+  position: relative;
+  background: $white-bg-color;
+  box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+  text-align: left;
+
+  @include mq(mobile-only) {
+    padding: 20px 30px;
+  }
+
+  @include mq(tablet) {
+    padding: 25px 95px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include mq(desktop) {
+    padding: 70px 110px;
+  }
+}
+
+.benefits__item {
+  &:before {
+    display: block;
+    margin-bottom: 5px;
+    counter-increment: section;
+    content: '\2014  0'counter(section);
+    color: $accent-text-color;
+  }
+
+  @include mq(mobile-only) {
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+
+  @include mq(tablet) {
+    @include grid(24px, 2);
+  }
+
+  @include mq(desktop) {
+    @include grid(40px, 3);
+  }
+}
+
+.benefits__title--secondary {
+  position: relative;
+}

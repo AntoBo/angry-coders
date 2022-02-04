@@ -1,0 +1,55 @@
+body {
+  background-color: $white-bg-color;
+
+  font-family: 'Montserrat', sans-serif;
+  @include font-style(12px, null, 1.67, 0.08em, $grey-text-color);
+}
+
+.page {
+  overflow: hidden;
+}
+
+.container {
+  margin : 0 auto;
+  padding: 0 20px;
+
+  max-width: 480px;
+
+  @include mq(tablet) {
+    max-width: $tablet-res;
+    padding  : 0 40px;
+  }
+
+  @include mq(desktop) {
+    max-width: $desktop-res;
+  }
+}
+
+.section {
+  padding: 25px 0;
+
+  @include mq(desktop) {
+    padding: 65px 0;
+  }
+}
+
+.section__title {
+  @include font-style(20px, 800, 1.3, 0.03em, $black-text-color);
+  text-align: center;
+
+  @include mq(tablet) {
+    font-size: 26px;
+  }
+
+  @include mq(desktop) {
+    font-size: 46px;
+  }
+}
+
+.item__title {
+  @include font-style(14px, 800, 1.43, 0.08em, $black-text-color);
+
+  @include mq(desktop) {
+    font-size: 20px;
+  }
+}

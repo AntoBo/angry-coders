@@ -1,0 +1,69 @@
+<header class="section header">
+  <div class="container header__flex">
+    <a class="header__logo" href=""
+      ><svg class="header__logo-icon logo-icon--hell">
+        <use href="./images/icons.svg#icon-hell"></use>
+      </svg>
+      <svg class="header__logo-icon logo-icon--capfire">
+        <use href="./images/icons.svg#icon-campfire"></use>
+      </svg>
+      <svg class="header__logo-icon logo-icon--en">
+        <use href="./images/icons.svg#icon-en"></use>
+      </svg>
+      <span class="header__logo-title">
+        <span class="header__logo-title--orange">Hellish</span>english</span
+      >
+    </a>
+    <ul class="header__nav">
+      <li class="header__nav-item">
+        <a class="header__nav-link" href="#program">Studying program </a>
+      </li>
+      <li class="header__nav-item">
+        <a class="header__nav-link" href="#about">About </a>
+      </li>
+      <li class="header__nav-item">
+        <a class="header__nav-link" href="#guarantee">Training options</a>
+      </li>
+      <li class="header__nav-item">
+        <a class="header__nav-link" href="#contacts">Contacts </a>
+      </li>
+    </ul>
+    <div class="header__buttons-container">
+      <button class="button button--inverted header__cons-button" type="button">
+        Consultation by phone
+      </button>
+
+      <!--Burger-->
+      <button
+        class="header__button-menu hamburger hamburger--spin"
+        aria-controls="menu-container"
+        aria-expanded="false"
+        data-menu-button
+        type="button"
+      >
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+      <div class="menu-container modal-open" id="menu-container" data-menu>
+        <ul class="menu-container__list">
+          <li class="menu-container__item">
+            <a class="menu-container__link" href="#program">Studying program</a>
+          </li>
+          <li class="menu-container__item">
+            <a class="menu-container__link menu-container__link--current" href="#about">About</a>
+          </li>
+          <li class="menu-container__item">
+            <a class="menu-container__link" href="#guarantee">Training options</a>
+          </li>
+          <li class="menu-container__item">
+            <a class="menu-container__link" href="#contacts">Contacts</a>
+          </li>
+        </ul>
+        <button class="button button--inverted menu-container__button" type="button">
+          Consultation by phone
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
