@@ -4,6 +4,8 @@ $('.slider-for').slick({
   arrows: false,
   // fade: true,
   asNavFor: '.slider-nav',
+  autoplay: true,
+  autoplaySpeed: 3000,
 });
 $('.slider-nav').slick({
   slidesToShow: 3,
