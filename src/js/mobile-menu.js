@@ -21,6 +21,6 @@
   navLink.addEventListener('click', () => {
     const expanded = navLink.getAttribute('aria-expanded') === 'true' || false;
 
-    body.classList.toggle('no-scroll');
+    // body.classList.toggle('no-scroll');
   });
 })();
