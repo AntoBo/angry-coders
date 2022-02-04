@@ -121,143 +121,143 @@
 
   // BUTTONS and overlay
 
-  &__switch {
-    padding: 10px 0;
-    z-index: 1;
+  // &__switch {
+  //   padding: 10px 0;
+  //   z-index: 1;
 
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
+  //   border: none;
+  //   background-color: transparent;
+  //   cursor: pointer;
 
-    @include mq(tablet) {
-      position: absolute;
-      top: 150px;
-      @include mq(desktop) {
-        top: 200px;
-      }
+  //   // @include mq(tablet) {
+  //   //   position: absolute;
+  //   //   top: 150px;
+  //   //   @include mq(desktop) {
+  //   //     top: 200px;
+  //   //   }
 
-      &--left {
-        left: 30px;
-        @include mq(desktop) {
-          left: -40px;
-        }
+  //   //   &--left {
+  //   //     left: 30px;
+  //   //     @include mq(desktop) {
+  //   //       left: -40px;
+  //   //     }
 
-        &:hover {
-          animation: arrow-left 1s linear infinite;
+  //   //     // &:hover {
+  //   //     //   animation: arrow-left 1s linear infinite;
 
-          @keyframes arrow-left {
-            0% {
-              left: 30px;
-            }
-            50% {
-              left: 25px;
-            }
-            100% {
-              left: 30px;
-            }
-          }
-          @include mq(desktop) {
-            @keyframes arrow-left {
-              0% {
-                left: -40px;
-              }
-              50% {
-                left: -35px;
-              }
-              100% {
-                left: -40px;
-              }
-            }
-          }
-        }
+  //   //     //   @keyframes arrow-left {
+  //   //     //     0% {
+  //   //     //       left: 30px;
+  //   //     //     }
+  //   //     //     50% {
+  //   //     //       left: 25px;
+  //   //     //     }
+  //   //     //     100% {
+  //   //     //       left: 30px;
+  //   //     //     }
+  //   //     //   }
+  //   //     //   @include mq(desktop) {
+  //   //     //     @keyframes arrow-left {
+  //   //     //       0% {
+  //   //     //         left: -40px;
+  //   //     //       }
+  //   //     //       50% {
+  //   //     //         left: -35px;
+  //   //     //       }
+  //   //     //       100% {
+  //   //     //         left: -40px;
+  //   //     //       }
+  //   //     //     }
+  //   //     //   }
+  //   //     // }
 
-        &:hover ~ .reviews__overlay--left {
-          display: block;
-        }
-      }
-      &--right {
-        right: 30px;
-        @include mq(desktop) {
-          right: -40px;
-        }
+  //   //     // &:hover ~ .reviews__overlay--left {
+  //   //     //   display: block;
+  //   //     // }
+  //   //   }
+  //   //   &--right {
+  //   //     right: 30px;
+  //   //     @include mq(desktop) {
+  //   //       right: -40px;
+  //   //     }
 
-        &:hover {
-          animation: arrow 1s linear infinite;
+  //   //     // &:hover {
+  //   //     //   animation: arrow 1s linear infinite;
 
-          @keyframes arrow {
-            0% {
-              right: 30px;
-            }
-            50% {
-              right: 25px;
-            }
-            100% {
-              right: 30px;
-            }
-          }
+  //   //     //   @keyframes arrow {
+  //   //     //     0% {
+  //   //     //       right: 30px;
+  //   //     //     }
+  //   //     //     50% {
+  //   //     //       right: 25px;
+  //   //     //     }
+  //   //     //     100% {
+  //   //     //       right: 30px;
+  //   //     //     }
+  //   //     //   }
 
-          @include mq(desktop) {
-            @keyframes arrow {
-              0% {
-                right: -40px;
-              }
-              50% {
-                right: -35px;
-              }
-              100% {
-                right: -40px;
-              }
-            }
-          }
-        }
-        &:hover ~ .reviews__overlay--right {
-          display: block;
-        }
-      }
-    }
+  //   //     //   @include mq(desktop) {
+  //   //     //     @keyframes arrow {
+  //   //     //       0% {
+  //   //     //         right: -40px;
+  //   //     //       }
+  //   //     //       50% {
+  //   //     //         right: -35px;
+  //   //     //       }
+  //   //     //       100% {
+  //   //     //         right: -40px;
+  //   //     //       }
+  //   //     //     }
+  //   //     //   }
+  //   //     // }
+  //   //     // &:hover ~ .reviews__overlay--right {
+  //   //     //   display: block;
+  //   //     // }
+  //   //   }
+  //   // }
 
-    &--left {
-      margin-right: 24px;
-    }
-    &--right {
-      margin-left: 24px;
-    }
-  }
+  //   &--left {
+  //     margin-right: 24px;
+  //   }
+  //   &--right {
+  //     margin-left: 24px;
+  //   }
+  // }
 
-  &__overlay {
-    position: absolute;
-    top: 0;
-    width: 10%;
-    @include mq(desktop) {
-      width: 15%;
-    }
-    height: 100%;
-    background: linear-gradient(
-      90deg,
-      rgb(255, 255, 255) 2%,
-      rgb(221, 220, 220) 49%,
-      rgb(255, 255, 255) 98%
-    );
-    opacity: 0.7;
-    display: none;
-    cursor: pointer;
-    &--left {
-      left: 0;
-      @include mq(desktop) {
-        left: -110px;
-      }
-    }
-    &--right {
-      right: 0;
-      @include mq(desktop) {
-        right: -110px;
-      }
-    }
-  }
+  // &__overlay {
+  //   position: absolute;
+  //   top: 0;
+  //   width: 10%;
+  //   @include mq(desktop) {
+  //     width: 15%;
+  //   }
+  //   height: 100%;
+  //   background: linear-gradient(
+  //     90deg,
+  //     rgb(255, 255, 255) 2%,
+  //     rgb(221, 220, 220) 49%,
+  //     rgb(255, 255, 255) 98%
+  //   );
+  //   opacity: 0.7;
+  //   display: none;
+  //   cursor: pointer;
+  //   &--left {
+  //     left: 0;
+  //     @include mq(desktop) {
+  //       left: -110px;
+  //     }
+  //   }
+  //   &--right {
+  //     right: 0;
+  //     @include mq(desktop) {
+  //       right: -110px;
+  //     }
+  //   }
+  // }
 
-  &__switch-icon--left {
-    transform: rotate(180deg);
-  }
+  // &__switch-icon--left {
+  //   transform: rotate(180deg);
+  // }
 
   // UL WITH IMAGES
 
@@ -278,6 +278,7 @@
   }
 
   &__list {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -293,5 +294,32 @@
 
 .slick-next:before,
 .slick-prev:before {
-  color: red;
+  content: '';
+}
+
+.reviews__item.slick-slide {
+  @include mq(mobile-only) {
+    opacity: 0;
+    @include animate(opacity);
+  }
+}
+
+.reviews__item.slick-active {
+  @include mq(mobile-only) {
+    opacity: 1;
+    @include animate(opacity);
+  }
+}
+
+.reviews__item.slick-current {
+  border: 3px solid $accent-btn-color;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.slick-prev.slick-arrow {
+  background-image: url();
+}
+.slick-next.slick-arrow {
+  background-image: url();
 }
